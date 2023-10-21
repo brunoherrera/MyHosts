@@ -114,6 +114,7 @@ $content = $content | ForEach-Object -Begin { $counter = 0 } -Process {
 	   -replace '0.0.0.0 smartlock.google.com','#0.0.0.0 smartlock.google.com' `
 	   -replace '0.0.0.0 id.google.com.uy','#0.0.0.0 id.google.com.uy' `
 	   -replace '0.0.0.0 click.redditmail.com','#0.0.0.0 click.redditmail.com' `
+	   -replace '0.0.0.0 ecsv2.roblox.com','#0.0.0.0 ecsv2.roblox.com' `
 	   -replace '0.0.0.0 adx.telegram.com','#0.0.0.0 adx.telegram.com'
 }
 
