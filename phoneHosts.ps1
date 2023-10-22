@@ -4,7 +4,8 @@ $url2 = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
 $file1 = "hosts_1_badmojr.txt"
 $file2 = "hosts_2_StevenBlack.txt"
 $outputFile = "combined_hosts.txt"
-$isUpToDate = 0
+$source1UpToDate = 0
+$source2UpToDate = 0
 
 # Define temporary file names
 $tempFile1 = "hosts_1_badmojr_temp.txt"
@@ -33,19 +34,21 @@ if ((Test-Path $file1) -and (Test-Path $file2)) {
     # Check if the hash of the existing file is different from the temporary file
     if ($existingHash1.Hash -ne $tempHash1.Hash) {
         Write-Host "$file1 is different. Updating."
+		Remove-Item $file1
         Move-Item $tempFile1 $file1
     } else {
         Write-Host "$file1 is up to date."
-		$script:isUpToDate = 1
+		$script:source1UpToDate = 1
         Remove-Item $tempFile1
     }
 
     if ($existingHash2.Hash -ne $tempHash2.Hash) {
         Write-Host "$file2 is different. Updating."
+		Remove-Item $file2
         Move-Item $tempFile2 $file2
     } else {
         Write-Host "$file2 is up to date."
-		$script:isUpToDate = 1
+		$script:source2UpToDate = 1
         Remove-Item $tempFile2
     }
 } else {
@@ -54,7 +57,7 @@ if ((Test-Path $file1) -and (Test-Path $file2)) {
     Move-Item $tempFile2 $file2
 }
 
-if ($isUpToDate -eq 0) {
+if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 	# Output a message indicating that the downloads are complete
 	Write-Host "Hosts download and update complete."
 
