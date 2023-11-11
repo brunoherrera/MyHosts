@@ -183,5 +183,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 # Pause and wait for user input before closing the console window
 Write-Host ""
 Write-Host ""
-Write-Host "Press any key to close this window..."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+Write-Host "Press ENTER to close this window..."
+do {
+        $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
+    } while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
