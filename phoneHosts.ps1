@@ -1,19 +1,15 @@
 # Define URLs and filenames
 $url1 = "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/hosts.txt"
 $url2 = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-$url3 = "https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt"
 $file1 = "hosts_1_badmojr.txt"
 $file2 = "hosts_2_StevenBlack.txt"
-$file3 = "hosts_3_d3ward.txt"
 $outputFile = "combined_hosts.txt"
 $source1UpToDate = 0
 $source2UpToDate = 0
-$source3UpToDate = 0
 
 # Define temporary file names
 $tempFile1 = "hosts_1_badmojr_temp.txt"
 $tempFile2 = "hosts_2_StevenBlack_temp.txt"
-$tempFile3 = "hosts_3_d3ward_temp.txt"
 
 # Create a new WebClient object
 $client = New-Object System.Net.WebClient
@@ -27,18 +23,13 @@ $client.DownloadFile($url1, $tempFile1)
 # Download the second file and save it to the temporary file
 $client.DownloadFile($url2, $tempFile2)
 
-# Download the third file and save it to the temporary file
-$client.DownloadFile($url3, $tempFile3)
-
 # Check if the existing files file1 and file2 exist
-if ((Test-Path $file1) -and (Test-Path $file2) -and (Test-Path $file3)) {
+if ((Test-Path $file1) -and (Test-Path $file2)) {
     # Check if existing files are different from temporary files (using hash comparison)
     $existingHash1 = Get-FileHash $file1 -Algorithm MD5
     $existingHash2 = Get-FileHash $file2 -Algorithm MD5
-	$existingHash3 = Get-FileHash $file3 -Algorithm MD5
     $tempHash1 = Get-FileHash $tempFile1 -Algorithm MD5
     $tempHash2 = Get-FileHash $tempFile2 -Algorithm MD5
-	$tempHash3 = Get-FileHash $tempFile3 -Algorithm MD5
 
     # Check if the hash of the existing file is different from the temporary file
     if ($existingHash1.Hash -ne $tempHash1.Hash) {
@@ -60,24 +51,13 @@ if ((Test-Path $file1) -and (Test-Path $file2) -and (Test-Path $file3)) {
 		$script:source2UpToDate = 1
         Remove-Item $tempFile2
     }
-	
-	if ($existingHash3.Hash -ne $tempHash3.Hash) {
-        Write-Host "$file3 is different. Updating."
-		Remove-Item $file3
-        Move-Item $tempFile3 $file3
-    } else {
-        Write-Host "$file3 is up to date."
-		$script:source3UpToDate = 1
-        Remove-Item $tempFile3
-    }
 } else {
     Write-Host "No previous hosts sources found. Using temporary files..."
     Move-Item $tempFile1 $file1
     Move-Item $tempFile2 $file2
-	Move-Item $tempFile3 $file3
 }
 
-if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0) -or ($source3UpToDate -eq 0)) {
+if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 	# Output a message indicating that the downloads are complete
 	Write-Host "Hosts download and update complete."
 
@@ -93,16 +73,15 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0) -or ($source3UpToDate 
 	# Read the contents of all files
 	$content1 = Get-Content $file1
 	$content2 = Get-Content $file2
-	$content3 = Get-Content $file3
 
 	# Combine the contents of all files
-	$combinedContent = $content1 + $content2 + $content3
+	$combinedContent = $content1 + $content2
 
 	# Write the combined contents to a new file
 	$combinedContent | Set-Content $outputFile
 
 	# Output confirmation to console
-	Write-Host "Contents of $file1, $file2 and $file3 have been combined and saved to $outputFile."
+	Write-Host "Contents of $file1 and $file2 have been combined and saved to $outputFile."
 
 	# Read the contents of the file into the $content variable
 	$content = Get-Content $outputFile
