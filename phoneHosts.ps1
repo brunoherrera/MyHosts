@@ -13,15 +13,40 @@ $tempFile2 = "hosts_2_StevenBlack_temp.txt"
 
 # Create a new WebClient object
 $client = New-Object System.Net.WebClient
+$client.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
 # Update status to console
 Write-Host "Downloading hosts ..."
 
 # Download the first file and save it to the temporary file
-$client.DownloadFile($url1, $tempFile1)
+try {
+    $client.DownloadFile($url1, $tempFile1)
+} catch {
+    Write-Error "Failed to download from $url1. Error: $_"
+    # Pause and wait for user input before closing the console window
+	Write-Host ""
+	Write-Host ""
+	Write-Host "Press ENTER to close this window..."
+	do {
+			$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
+		} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
+	exit 1
+}
 
 # Download the second file and save it to the temporary file
-$client.DownloadFile($url2, $tempFile2)
+try {
+    $client.DownloadFile($url2, $tempFile2)
+} catch {
+    Write-Error "Failed to download from $url2. Error: $_"
+    # Pause and wait for user input before closing the console window
+	Write-Host ""
+	Write-Host ""
+	Write-Host "Press ENTER to close this window..."
+	do {
+			$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
+		} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
+	exit 1
+}
 
 # Check if the existing files file1 and file2 exist
 if ((Test-Path $file1) -and (Test-Path $file2)) {
