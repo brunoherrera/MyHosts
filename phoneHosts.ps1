@@ -4,6 +4,7 @@ $url2 = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
 $file1 = "hosts_1_badmojr.txt"
 $file2 = "hosts_2_StevenBlack.txt"
 $outputFile = "combined_hosts.txt"
+$bypass = "bypass.txt"
 $source1UpToDate = 0
 $source2UpToDate = 0
 
@@ -11,41 +12,48 @@ $source2UpToDate = 0
 $tempFile1 = "hosts_1_badmojr_temp.txt"
 $tempFile2 = "hosts_2_StevenBlack_temp.txt"
 
-# Create a new WebClient object
-$client = New-Object System.Net.WebClient
-$client.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+if (Test-Path $bypass) {
+    $content = Get-Content $bypass -Raw
 
-# Update status to console
-Write-Host "Downloading hosts ..."
+    if ($content -eq "0") {
+		
+		# Create a new WebClient object
+		$client = New-Object System.Net.WebClient
+		$client.Headers["User-Agent"] = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36"
+		
+		# Update status to console
+		Write-Host "Downloading hosts ..."
 
-# Download the first file and save it to the temporary file
-try {
-    $client.DownloadFile($url1, $tempFile1)
-} catch {
-    Write-Error "Failed to download from $url1. Error: $_"
-    # Pause and wait for user input before closing the console window
-	Write-Host ""
-	Write-Host ""
-	Write-Host "Press ENTER to close this window..."
-	do {
-			$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
-		} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
-	exit 1
-}
+		# Download the first file and save it to the temporary file
+		try {
+			$client.DownloadFile($url1, $tempFile1)
+		} catch {
+			Write-Error "Failed to download from $url1. Error: $_"
+			# Pause and wait for user input before closing the console window
+			Write-Host ""
+			Write-Host ""
+			Write-Host "Press ENTER to close this window..."
+			do {
+					$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
+				} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
+			exit 1
+		}
 
-# Download the second file and save it to the temporary file
-try {
-    $client.DownloadFile($url2, $tempFile2)
-} catch {
-    Write-Error "Failed to download from $url2. Error: $_"
-    # Pause and wait for user input before closing the console window
-	Write-Host ""
-	Write-Host ""
-	Write-Host "Press ENTER to close this window..."
-	do {
-			$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
-		} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
-	exit 1
+		# Download the second file and save it to the temporary file
+		try {
+			$client.DownloadFile($url2, $tempFile2)
+		} catch {
+			Write-Error "Failed to download from $url2. Error: $_"
+			# Pause and wait for user input before closing the console window
+			Write-Host ""
+			Write-Host ""
+			Write-Host "Press ENTER to close this window..."
+			do {
+					$key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
+				} while ($key -ne 13)  # 13 is the Virtual Key Code for Enter
+			exit 1
+		}
+	}
 }
 
 # Check if the existing files file1 and file2 exist
@@ -143,7 +151,6 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 		[System.Console]::WriteLine($progressBarText)
 		$_ -replace '0.0.0.0 thepiratebay.org','#0.0.0.0 thepiratebay.org' `
 		   -replace '0.0.0.0 www.thepiratebay.org','#0.0.0.0 www.thepiratebay.org' `
-		   -replace '0.0.0.0 thepiratebay.org','#0.0.0.0 thepiratebay.org' `
 		   -replace '0.0.0.0 www.thepiratebay.org','#0.0.0.0 www.thepiratebay.org' `
 		   -replace '0.0.0.0 poloniex.com','#0.0.0.0 poloniex.com' `
 		   -replace '0.0.0.0 api2.poloniex.com','#0.0.0.0 api2.poloniex.com' `
