@@ -12,6 +12,22 @@ $source2UpToDate = 0
 $tempFile1 = "hosts_1_badmojr_temp.txt"
 $tempFile2 = "hosts_2_StevenBlack_temp.txt"
 
+# Ensure required files exist
+
+# If bypass.txt does not exist, create it with default content "0"
+if (-not (Test-Path $bypass)) {
+    "0" | Set-Content $bypass
+    Write-Host "$bypass not found. Created with default content 0."
+}
+
+# Ensure host files and output file exist, create them empty if missing
+foreach ($file in @($file1, $file2, $outputFile)) {
+    if (-not (Test-Path $file)) {
+        New-Item -ItemType File -Path $file -Force | Out-Null
+        Write-Host "$file not found. Created empty."
+    }
+}
+
 if (Test-Path $bypass) {
     $content = Get-Content $bypass -Raw
 
