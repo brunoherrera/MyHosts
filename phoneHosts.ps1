@@ -117,7 +117,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 	}
 
 	# Update status to console
-	Write-Host "Combining $file1, $file2 and $file3 ..."
+	Write-Host "Combining $file1 and $file2 ..."
 
 	# Read the contents of all files
 	$content1 = Get-Content $file1
