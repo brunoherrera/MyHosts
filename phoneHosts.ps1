@@ -25,28 +25,46 @@ foreach ($file in @($file1, $file2, $outputFile)) {
     }
 }
 
+# --- HELPER FUNCTION FOR SAFE DOWNLOAD ---
+function Download-FileSafe {
+    param (
+        [string]$Url,
+        [string]$Output
+    )
+
+    $maxRetries = 5
+    $delaySeconds = 5
+
+    for ($attempt = 1; $attempt -le $maxRetries; $attempt++) {
+        try {
+            Invoke-WebRequest -Uri $Url -OutFile $Output -Headers @{
+                "User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+                "Referer" = "https://github.com/"
+            } -UseBasicParsing -ErrorAction Stop
+            Write-Host "Downloaded $Url successfully."
+            return
+        } catch {
+            if ($_.Exception.Response.StatusCode -eq 429) {
+                Write-Warning "429 Too Many Requests. Waiting $delaySeconds seconds before retry ($attempt/$maxRetries)..."
+                Start-Sleep -Seconds $delaySeconds
+            } else {
+                Write-Error "Failed to download $Url. Error: $_"
+                break
+            }
+        }
+    }
+    throw "Could not download $Url after $maxRetries attempts."
+}
+
 # --- MAIN LOGIC ---
 $bypassValue = Get-Content $bypass -Raw
 
 if ($bypassValue -eq "0") {
     # --- DOWNLOAD MODE ---
-    $client = New-Object System.Net.WebClient
-    $client.Headers["User-Agent"] = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36"
-
-    Write-Host "Downloading hosts ..."
-
-    try {
-        $client.DownloadFile($url1, $tempFile1)
-        $client.DownloadFile($url2, $tempFile2)
-    } catch {
-        Write-Error "Failed to download one or more files. Error: $_"
-        Write-Host ""
-        Write-Host "Press ENTER to close this window..."
-        do {
-            $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
-        } while ($key -ne 13)
-        exit 1
-    }
+    Write-Host "Downloading hosts (GitHub-safe) ..."
+    Download-FileSafe -Url $url1 -Output $tempFile1
+    Start-Sleep -Milliseconds 500
+    Download-FileSafe -Url $url2 -Output $tempFile2
 
     # --- HASH COMPARISON ---
     if ((Test-Path $file1) -and (Test-Path $file2)) {
@@ -86,9 +104,7 @@ if ($bypassValue -eq "0") {
     if (-not (Test-Path $file1) -or -not (Test-Path $file2)) {
         Write-Error "Bypass mode selected, but one or both host files do not exist."
         Write-Host "Press ENTER to close this window..."
-        do {
-            $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
-        } while ($key -ne 13)
+        do { $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode } while ($key -ne 13)
         exit 1
     }
 
@@ -186,6 +202,4 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 
 Write-Host ""
 Write-Host "Press ENTER to close this window..."
-do {
-    $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode
-} while ($key -ne 13)
+do { $key = $Host.UI.RawUI.ReadKey("IncludeKeyDown,NoEcho").VirtualKeyCode } while ($key -ne 13)
