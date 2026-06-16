@@ -5,6 +5,12 @@ $file1 = "hosts_1_badmojr.txt"
 $file2 = "hosts_2_StevenBlack.txt"
 $outputFile = "combined_hosts.txt"
 $bypass = "bypass.txt"
+
+$abuseIpUrl = "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-365d.ipv4"
+$abuseIpFile = "abuseipdb-s100-365d.txt"
+$abuseIpTemp = "abuseipdb-s100-365d_temp.txt"
+$abuseIpCombined = "combined_portmaster_abuseipdb_list.txt"
+$abuseIpUpToDate = 0
 $source1UpToDate = 0
 $source2UpToDate = 0
 
@@ -18,7 +24,7 @@ if (-not (Test-Path $bypass)) {
     Write-Host "$bypass not found. Created with default content 0."
 }
 
-foreach ($file in @($file1, $file2, $outputFile)) {
+foreach ($file in @($file1, $file2, $outputFile, $abuseIpFile)) {
     if (-not (Test-Path $file)) {
         New-Item -ItemType File -Path $file -Force | Out-Null
         Write-Host "$file not found. Created empty."
@@ -199,6 +205,159 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
     $uniqueContent.Keys | Set-Content $outputFile
     Write-Host "Allowed hosts entries and removed duplicates in $outputFile."
 }
+
+# ------------------------------------------------------------
+# AbuseIPDB update check
+# ------------------------------------------------------------
+
+Write-Host ""
+Write-Host "Checking AbuseIPDB source..."
+
+Download-FileSafe -Url $abuseIpUrl -Output $abuseIpTemp
+
+if (Test-Path $abuseIpFile) {
+
+    $existingHash = Get-FileHash $abuseIpFile -Algorithm MD5
+    $tempHash = Get-FileHash $abuseIpTemp -Algorithm MD5
+
+    if ($existingHash.Hash -ne $tempHash.Hash) {
+        Write-Host "$abuseIpFile is different. Updating."
+
+        Remove-Item $abuseIpFile -Force
+        Move-Item $abuseIpTemp $abuseIpFile
+    }
+    else {
+        Write-Host "$abuseIpFile is up to date."
+        Remove-Item $abuseIpTemp -Force
+        $abuseIpUpToDate = 1
+    }
+}
+else {
+    Move-Item $abuseIpTemp $abuseIpFile
+}
+
+# ------------------------------------------------------------
+# Create combined_hosts_abuseipdb.txt
+# ------------------------------------------------------------
+
+Write-Host "Creating $abuseIpCombined ..."
+
+$hostsContent = Get-Content $outputFile
+
+Write-Host "Cleaning AbuseIPDB list ..."
+
+$abuseRaw = Get-Content $abuseIpFile
+$totalLines = $abuseRaw.Count
+
+$abuseContent = New-Object System.Collections.Generic.List[string]
+
+[System.Console]::WriteLine("Completion: [                    ]")
+
+for ($i = 0; $i -lt $totalLines; $i++) {
+
+    $percentage = [int](($i / $totalLines) * 100)
+    $barLength = [int](($percentage / 2))
+
+    $progressBarText = ("#" * $barLength).PadRight(50)
+    $progressBarText = $progressBarText.Insert($barLength, "|")
+    $progressBarText = $progressBarText.Insert(0, "|")
+    $progressBarText = $progressBarText.PadRight(52)
+    $progressBarText += " $percentage%"
+
+    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+    [System.Console]::WriteLine($progressBarText)
+
+    $line = $abuseRaw[$i]
+
+	$matches = [regex]::Matches(
+		$line,
+		'(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)'
+	)
+
+	foreach ($match in $matches) {
+		$abuseContent.Add($match.Value)
+	}
+}
+
+[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+[System.Console]::WriteLine("|##################################################| 100%")
+
+Write-Host "Found $($abuseContent.Count) valid IPv4 addresses."
+
+$combinedUnique = @{}
+Write-Host "Cleaning hosts list for Portmaster format ..."
+
+$cleanHostsContent = New-Object System.Collections.Generic.List[string]
+
+[System.Console]::WriteLine("Completion: [                    ]")
+
+for ($i = 0; $i -lt $hostsContent.Count; $i++) {
+
+    $percentage = [int](($i / $hostsContent.Count) * 100)
+    $barLength = [int](($percentage / 2))
+
+    $progressBarText = ("#" * $barLength).PadRight(50)
+    $progressBarText = $progressBarText.Insert($barLength, "|")
+    $progressBarText = $progressBarText.Insert(0, "|")
+    $progressBarText = $progressBarText.PadRight(52)
+    $progressBarText += " $percentage%"
+
+    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+    [System.Console]::WriteLine($progressBarText)
+
+    $line = $hostsContent[$i]
+
+    # Remove comments and everything after them
+    $line = $line -replace '\s*#.*$', ''
+
+    # Remove leading hosts IPs
+    $line = $line -replace '^0\.0\.0\.0\s+', ''
+    $line = $line -replace '^127\.0\.0\.1\s+', ''
+    $line = $line -replace '^::1\s+', ''
+
+    $line = $line.Trim()
+
+    if ($line.Length -gt 0) {
+        $cleanHostsContent.Add($line)
+    }
+}
+
+[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+[System.Console]::WriteLine("|##################################################| 100%")
+
+$mergedContent = $cleanHostsContent + $abuseContent
+
+Write-Host "Merging and removing duplicates ..."
+
+[System.Console]::WriteLine("Completion: [                    ]")
+
+for ($i = 0; $i -lt $mergedContent.Count; $i++) {
+
+    $percentage = [int](($i / $mergedContent.Count) * 100)
+    $barLength = [int](($percentage / 2))
+
+    $progressBarText = ("#" * $barLength).PadRight(50)
+    $progressBarText = $progressBarText.Insert($barLength, "|")
+    $progressBarText = $progressBarText.Insert(0, "|")
+    $progressBarText = $progressBarText.PadRight(52)
+    $progressBarText += " $percentage%"
+
+    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+    [System.Console]::WriteLine($progressBarText)
+
+    $line = $mergedContent[$i]
+
+    if (-not $combinedUnique.ContainsKey($line)) {
+        $combinedUnique[$line] = $null
+    }
+}
+
+[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+[System.Console]::WriteLine("|##################################################| 100%")
+
+$combinedUnique.Keys | Set-Content $abuseIpCombined
+
+Write-Host "$abuseIpCombined created."
 
 Write-Host ""
 Write-Host "Press ENTER to close this window..."
