@@ -1,3 +1,8 @@
+# Write-Host "Success" -ForegroundColor Green
+# Write-Host "Warning" -ForegroundColor Yellow
+# Write-Host "Error" -ForegroundColor Red
+# Write-Host "Info" -ForegroundColor Cyan
+
 # Define URLs and filenames
 $url1 = "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/hosts.txt"
 $url2 = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
@@ -21,13 +26,13 @@ $tempFile2 = "hosts_2_StevenBlack_temp.txt"
 # Ensure required files exist
 if (-not (Test-Path $bypass)) {
     "0" | Set-Content $bypass
-    Write-Host "$bypass not found. Created with default content 0."
+    Write-Host "$bypass not found. Created with default content 0." -ForegroundColor Yellow
 }
 
 foreach ($file in @($file1, $file2, $outputFile, $abuseIpFile)) {
     if (-not (Test-Path $file)) {
         New-Item -ItemType File -Path $file -Force | Out-Null
-        Write-Host "$file not found. Created empty."
+        Write-Host "$file not found. Created empty." -ForegroundColor Cyan
     }
 }
 
@@ -67,7 +72,7 @@ $bypassValue = Get-Content $bypass -Raw
 
 if ($bypassValue -eq "0") {
     # --- DOWNLOAD MODE ---
-    Write-Host "Downloading hosts (GitHub-safe) ..."
+    Write-Host "Downloading hosts (GitHub-safe) ..." -ForegroundColor Cyan
     Download-FileSafe -Url $url1 -Output $tempFile1
     Start-Sleep -Milliseconds 500
     Download-FileSafe -Url $url2 -Output $tempFile2
@@ -80,33 +85,33 @@ if ($bypassValue -eq "0") {
         $tempHash2 = Get-FileHash $tempFile2 -Algorithm MD5
 
         if ($existingHash1.Hash -ne $tempHash1.Hash) {
-            Write-Host "$file1 is different. Updating."
+            Write-Host "$file1 is different. Updating." -ForegroundColor Yellow
             Remove-Item $file1 -Force
             Move-Item $tempFile1 $file1
         } else {
-            Write-Host "$file1 is up to date."
+            Write-Host "$file1 is up to date." -ForegroundColor Green
             $source1UpToDate = 1
             Remove-Item $tempFile1 -Force
         }
 
         if ($existingHash2.Hash -ne $tempHash2.Hash) {
-            Write-Host "$file2 is different. Updating."
+            Write-Host "$file2 is different. Updating." -ForegroundColor Yellow
             Remove-Item $file2 -Force
             Move-Item $tempFile2 $file2
         } else {
-            Write-Host "$file2 is up to date."
+            Write-Host "$file2 is up to date." -ForegroundColor Green
             $source2UpToDate = 1
             Remove-Item $tempFile2 -Force
         }
     } else {
-        Write-Host "No previous hosts sources found. Using temporary files..."
+        Write-Host "No previous hosts sources found. Using temporary files..." -ForegroundColor Cyan
         Move-Item $tempFile1 $file1
         Move-Item $tempFile2 $file2
     }
 
 } else {
     # --- BYPASS MODE ---
-    Write-Host "Bypass enabled. Using existing host files directly."
+    Write-Host "Bypass enabled. Using existing host files directly." -ForegroundColor Yellow
     if (-not (Test-Path $file1) -or -not (Test-Path $file2)) {
         Write-Error "Bypass mode selected, but one or both host files do not exist."
         Write-Host "Press ENTER to close this window..."
@@ -121,7 +126,7 @@ if ($bypassValue -eq "0") {
 
 # --- COMBINATION + CLEANUP ---
 if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
-    Write-Host "Hosts download and update complete."
+    Write-Host "Hosts download and update complete." -ForegroundColor Green
 
     if (Test-Path $outputFile) {
         Write-Host "$outputFile exists, deleting."
@@ -134,7 +139,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
     $combinedContent = $content1 + $content2
     $combinedContent | Set-Content $outputFile
 
-    Write-Host "Contents of $file1 and $file2 have been combined and saved to $outputFile."
+    Write-Host "Contents of $file1 and $file2 have been combined and saved to $outputFile." -ForegroundColor Green
 
     Write-Host "Removing all commented lines ..."
     $content = Get-Content $outputFile | Where-Object { $_ -notmatch '^\s*#' }
@@ -203,7 +208,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
     }
 
     $uniqueContent.Keys | Set-Content $outputFile
-    Write-Host "Allowed hosts entries and removed duplicates in $outputFile."
+    Write-Host "Allowed hosts entries and removed duplicates in $outputFile." -ForegroundColor Green
 }
 
 # ------------------------------------------------------------
@@ -211,7 +216,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
 # ------------------------------------------------------------
 
 Write-Host ""
-Write-Host "Checking AbuseIPDB source..."
+Write-Host "Checking AbuseIPDB source..." -ForegroundColor Cyan
 
 Download-FileSafe -Url $abuseIpUrl -Output $abuseIpTemp
 
@@ -221,13 +226,13 @@ if (Test-Path $abuseIpFile) {
     $tempHash = Get-FileHash $abuseIpTemp -Algorithm MD5
 
     if ($existingHash.Hash -ne $tempHash.Hash) {
-        Write-Host "$abuseIpFile is different. Updating."
+        Write-Host "$abuseIpFile is different. Updating." -ForegroundColor Yellow
 
         Remove-Item $abuseIpFile -Force
         Move-Item $abuseIpTemp $abuseIpFile
     }
     else {
-        Write-Host "$abuseIpFile is up to date."
+        Write-Host "$abuseIpFile is up to date." -ForegroundColor Green
         Remove-Item $abuseIpTemp -Force
         $abuseIpUpToDate = 1
     }
@@ -240,124 +245,135 @@ else {
 # Create combined_hosts_abuseipdb.txt
 # ------------------------------------------------------------
 
-Write-Host "Creating $abuseIpCombined ..."
+$portmasterNeedsUpdate =
+    ($source1UpToDate -eq 0) -or
+    ($source2UpToDate -eq 0) -or
+    ($abuseIpUpToDate -eq 0)
 
-$hostsContent = Get-Content $outputFile
+if ($portmasterNeedsUpdate) {
+	Write-Host "Creating $abuseIpCombined ..."
 
-Write-Host "Cleaning AbuseIPDB list ..."
+	$hostsContent = Get-Content $outputFile
 
-$abuseRaw = Get-Content $abuseIpFile
-$totalLines = $abuseRaw.Count
+	Write-Host "Cleaning AbuseIPDB list ..."
 
-$abuseContent = New-Object System.Collections.Generic.List[string]
+	$abuseRaw = Get-Content $abuseIpFile
+	$totalLines = $abuseRaw.Count
 
-[System.Console]::WriteLine("Completion: [                    ]")
+	$abuseContent = New-Object System.Collections.Generic.List[string]
 
-for ($i = 0; $i -lt $totalLines; $i++) {
+	[System.Console]::WriteLine("Completion: [                    ]")
 
-    $percentage = [int](($i / $totalLines) * 100)
-    $barLength = [int](($percentage / 2))
+	for ($i = 0; $i -lt $totalLines; $i++) {
 
-    $progressBarText = ("#" * $barLength).PadRight(50)
-    $progressBarText = $progressBarText.Insert($barLength, "|")
-    $progressBarText = $progressBarText.Insert(0, "|")
-    $progressBarText = $progressBarText.PadRight(52)
-    $progressBarText += " $percentage%"
+		$percentage = [int](($i / $totalLines) * 100)
+		$barLength = [int](($percentage / 2))
 
-    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-    [System.Console]::WriteLine($progressBarText)
+		$progressBarText = ("#" * $barLength).PadRight(50)
+		$progressBarText = $progressBarText.Insert($barLength, "|")
+		$progressBarText = $progressBarText.Insert(0, "|")
+		$progressBarText = $progressBarText.PadRight(52)
+		$progressBarText += " $percentage%"
 
-    $line = $abuseRaw[$i]
+		[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+		[System.Console]::WriteLine($progressBarText)
 
-	$matches = [regex]::Matches(
-		$line,
-		'(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)'
-	)
+		$line = $abuseRaw[$i]
 
-	foreach ($match in $matches) {
-		$abuseContent.Add($match.Value)
+		$matches = [regex]::Matches(
+			$line,
+			'(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)'
+		)
+
+		foreach ($match in $matches) {
+			$abuseContent.Add($match.Value)
+		}
 	}
+
+	[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+	[System.Console]::WriteLine("|##################################################| 100%")
+
+	Write-Host "Found $($abuseContent.Count) valid IPv4 addresses." -ForegroundColor Green
+
+	$combinedUnique = @{}
+	Write-Host "Cleaning hosts list for Portmaster format ..."
+
+	$cleanHostsContent = New-Object System.Collections.Generic.List[string]
+
+	[System.Console]::WriteLine("Completion: [                    ]")
+
+	for ($i = 0; $i -lt $hostsContent.Count; $i++) {
+
+		$percentage = [int](($i / $hostsContent.Count) * 100)
+		$barLength = [int](($percentage / 2))
+
+		$progressBarText = ("#" * $barLength).PadRight(50)
+		$progressBarText = $progressBarText.Insert($barLength, "|")
+		$progressBarText = $progressBarText.Insert(0, "|")
+		$progressBarText = $progressBarText.PadRight(52)
+		$progressBarText += " $percentage%"
+
+		[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+		[System.Console]::WriteLine($progressBarText)
+
+		$line = $hostsContent[$i]
+
+		# Remove comments and everything after them
+		$line = $line -replace '\s*#.*$', ''
+
+		# Remove leading hosts IPs
+		$line = $line -replace '^0\.0\.0\.0\s+', ''
+		$line = $line -replace '^127\.0\.0\.1\s+', ''
+		$line = $line -replace '^::1\s+', ''
+
+		$line = $line.Trim()
+
+		if ($line.Length -gt 0) {
+			$cleanHostsContent.Add($line)
+		}
+	}
+
+	[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+	[System.Console]::WriteLine("|##################################################| 100%")
+
+	$mergedContent = $cleanHostsContent + $abuseContent
+
+	Write-Host "Merging and removing duplicates ..."
+
+	[System.Console]::WriteLine("Completion: [                    ]")
+
+	for ($i = 0; $i -lt $mergedContent.Count; $i++) {
+
+		$percentage = [int](($i / $mergedContent.Count) * 100)
+		$barLength = [int](($percentage / 2))
+
+		$progressBarText = ("#" * $barLength).PadRight(50)
+		$progressBarText = $progressBarText.Insert($barLength, "|")
+		$progressBarText = $progressBarText.Insert(0, "|")
+		$progressBarText = $progressBarText.PadRight(52)
+		$progressBarText += " $percentage%"
+
+		[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+		[System.Console]::WriteLine($progressBarText)
+
+		$line = $mergedContent[$i]
+
+		if (-not $combinedUnique.ContainsKey($line)) {
+			$combinedUnique[$line] = $null
+		}
+	}
+
+	[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+	[System.Console]::WriteLine("|##################################################| 100%")
+
+	$combinedUnique.Keys | Set-Content $abuseIpCombined
+
+	Write-Host "$abuseIpCombined created." -ForegroundColor Green
 }
 
-[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-[System.Console]::WriteLine("|##################################################| 100%")
-
-Write-Host "Found $($abuseContent.Count) valid IPv4 addresses."
-
-$combinedUnique = @{}
-Write-Host "Cleaning hosts list for Portmaster format ..."
-
-$cleanHostsContent = New-Object System.Collections.Generic.List[string]
-
-[System.Console]::WriteLine("Completion: [                    ]")
-
-for ($i = 0; $i -lt $hostsContent.Count; $i++) {
-
-    $percentage = [int](($i / $hostsContent.Count) * 100)
-    $barLength = [int](($percentage / 2))
-
-    $progressBarText = ("#" * $barLength).PadRight(50)
-    $progressBarText = $progressBarText.Insert($barLength, "|")
-    $progressBarText = $progressBarText.Insert(0, "|")
-    $progressBarText = $progressBarText.PadRight(52)
-    $progressBarText += " $percentage%"
-
-    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-    [System.Console]::WriteLine($progressBarText)
-
-    $line = $hostsContent[$i]
-
-    # Remove comments and everything after them
-    $line = $line -replace '\s*#.*$', ''
-
-    # Remove leading hosts IPs
-    $line = $line -replace '^0\.0\.0\.0\s+', ''
-    $line = $line -replace '^127\.0\.0\.1\s+', ''
-    $line = $line -replace '^::1\s+', ''
-
-    $line = $line.Trim()
-
-    if ($line.Length -gt 0) {
-        $cleanHostsContent.Add($line)
-    }
+else {
+    Write-Host "All sources are up to date. Skipping Portmaster list rebuild." -ForegroundColor Green
 }
-
-[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-[System.Console]::WriteLine("|##################################################| 100%")
-
-$mergedContent = $cleanHostsContent + $abuseContent
-
-Write-Host "Merging and removing duplicates ..."
-
-[System.Console]::WriteLine("Completion: [                    ]")
-
-for ($i = 0; $i -lt $mergedContent.Count; $i++) {
-
-    $percentage = [int](($i / $mergedContent.Count) * 100)
-    $barLength = [int](($percentage / 2))
-
-    $progressBarText = ("#" * $barLength).PadRight(50)
-    $progressBarText = $progressBarText.Insert($barLength, "|")
-    $progressBarText = $progressBarText.Insert(0, "|")
-    $progressBarText = $progressBarText.PadRight(52)
-    $progressBarText += " $percentage%"
-
-    [System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-    [System.Console]::WriteLine($progressBarText)
-
-    $line = $mergedContent[$i]
-
-    if (-not $combinedUnique.ContainsKey($line)) {
-        $combinedUnique[$line] = $null
-    }
-}
-
-[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-[System.Console]::WriteLine("|##################################################| 100%")
-
-$combinedUnique.Keys | Set-Content $abuseIpCombined
-
-Write-Host "$abuseIpCombined created."
 
 Write-Host ""
 Write-Host "Press ENTER to close this window..."
