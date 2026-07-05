@@ -184,6 +184,7 @@ if (($source1UpToDate -eq 0) -or ($source2UpToDate -eq 0)) {
            -replace '0.0.0.0 smartlock.google.com','#0.0.0.0 smartlock.google.com' `
            -replace '0.0.0.0 id.google.com.uy','#0.0.0.0 id.google.com.uy' `
            -replace '0.0.0.0 click.redditmail.com','#0.0.0.0 click.redditmail.com' `
+		   -replace '0.0.0.0 freedns.afraid.org','#0.0.0.0 freedns.afraid.org' `
            -replace '0.0.0.0 adx.telegram.com','#0.0.0.0 adx.telegram.com'
     }
 
@@ -299,6 +300,33 @@ if ($portmasterNeedsUpdate) {
 	Write-Host "Cleaning hosts list for Portmaster format ..."
 
 	$cleanHostsContent = New-Object System.Collections.Generic.List[string]
+	
+	$excludedDomains = @(
+		'thepiratebay.org',
+		'www.thepiratebay.org',
+		'poloniex.com',
+		'api2.poloniex.com',
+		'm.poloniex.com',
+		'public.poloniex.com',
+		'js.gleam.io',
+		'www.g2a.com',
+		'nllapps.com',
+		'gleamio.com',
+		'www.ustream.tv',
+		'www.ipify.org',
+		'ipify.org',
+		'api.ipify.org',
+		'coinfaucet.eu',
+		'api64.ipify.org',
+		'api6.ipify.org',
+		'api4.ipify.org',
+		'geo.ipify.org',
+		'smartlock.google.com',
+		'id.google.com.uy',
+		'click.redditmail.com',
+		'freedns.afraid.org',
+		'adx.telegram.com'
+	)
 
 	[System.Console]::WriteLine("Completion: [                    ]")
 
@@ -327,8 +355,11 @@ if ($portmasterNeedsUpdate) {
 		$line = $line -replace '^::1\s+', ''
 
 		$line = $line.Trim()
-
-		if ($line.Length -gt 0) {
+		
+		if (
+			$line.Length -gt 0 -and
+			$line -notin $excludedDomains
+		) {
 			$cleanHostsContent.Add($line)
 		}
 	}
