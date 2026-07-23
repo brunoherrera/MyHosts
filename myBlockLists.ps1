@@ -3,6 +3,8 @@
 # Write-Host "Error" -ForegroundColor Red
 # Write-Host "Info" -ForegroundColor Cyan
 
+Set-Location $PSScriptRoot
+
 # Define URLs and filenames
 $url1 = "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/hosts.txt"
 $url2 = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
