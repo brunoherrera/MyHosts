@@ -20,14 +20,20 @@ try {
 	$source2UpToDate = $false
 	$abuseIpUpToDate = $false
 
-	# Domains to allow / exclude from blocking ($O(1) HashSet)
+	# Domains and system local entries to exclude from blocking ($O(1) HashSet)
 	[string[]]$excludedDomainsList = @(
 		'thepiratebay.org', 'www.thepiratebay.org', 'poloniex.com', 'api2.poloniex.com',
 		'm.poloniex.com', 'public.poloniex.com', 'js.gleam.io', 'www.g2a.com',
 		'nllapps.com', 'gleamio.com', 'www.ustream.tv', 'www.ipify.org',
 		'ipify.org', 'api.ipify.org', 'coinfaucet.eu', 'api64.ipify.org',
 		'api6.ipify.org', 'api4.ipify.org', 'geo.ipify.org', 'smartlock.google.com',
-		'id.google.com.uy', 'click.redditmail.com', 'freedns.afraid.org', 'adx.telegram.com'
+		'id.google.com.uy', 'click.redditmail.com', 'freedns.afraid.org', 'adx.telegram.com',
+		# Localhost & Loopback exclusions
+		'localhost', 'localhost.localdomain', 'local', 'broadcasthost', '255.255.255.255 broadcasthost',
+		'ip6-localhost', 'ip6-loopback', 'fe80::1%lo0 localhost', 'ip6-localnet', 'ff00::0 ip6-localnet',
+		'ip6-mcastprefix', 'ff00::0 ip6-mcastprefix', 'ip6-allnodes', 'ff02::1 ip6-allnodes',
+		'ip6-allrouters', 'ff02::2 ip6-allrouters', 'ip6-allhosts', 'ff02::3 ip6-allhosts',
+		'0.0.0.0', '255.255.255.255'
 	)
 	$excludedSet = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
 	$excludedSet.UnionWith($excludedDomainsList)
@@ -247,7 +253,8 @@ try {
 
 			$line = $hostsLines[$i]
 			$line = $line -replace '\s*#.*$', ''
-			$line = $line -replace '^(0\.0\.0\.0|127\.0\.0\.1|::1)\s+', ''
+			# Strip standard host prefixes (IPv4, IPv6, Broadcast)
+			$line = $line -replace '^(0\.0\.0\.0|127\.0\.0\.1|::1|fe80::1%lo0|ff00::0|ff02::[123]|255\.255\.255\.255)\s+', ''
 			$line = $line.Trim()
 
 			if ($line.Length -gt 0 -and -not $excludedSet.Contains($line)) {
@@ -263,7 +270,9 @@ try {
 		$portmasterSet.UnionWith([string[]]$cleanHostsList)
 		
 		foreach ($ip in $abuseContent) {
-			[void]$portmasterSet.Add($ip)
+			if (-not $excludedSet.Contains($ip)) {
+				[void]$portmasterSet.Add($ip)
+			}
 		}
 
 		Save-FileAtomic -Path $abuseIpCombined -Content $portmasterSet
