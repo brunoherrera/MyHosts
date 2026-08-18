@@ -21,7 +21,7 @@ try {
 
 	$abuseIpCombined = "combined_portmaster_abuseipdb_list.txt"
 	$pythonPushScript = "D:\GITHUB\gitPushHosts.py"
-	$logFile = "hostsUPDATE.log"
+	$logFile = Join-Path $PSScriptRoot "hostsUPDATE.log"
 
 	$source1UpToDate = $false
 	$source2UpToDate = $false
@@ -61,7 +61,6 @@ try {
 				return $response.Content
 			} catch {
 				if ($_.Exception.Response.StatusCode -eq 429) {
-					Write-Warning "429 Too Many Requests. Waiting $delaySeconds seconds before retry ($attempt/$maxRetries)..."
 					Start-Sleep -Seconds $delaySeconds
 				} else {
 					Write-Error "Failed to download $Url. Error: $_"
@@ -85,18 +84,22 @@ try {
 		return (Get-FileHash -Path $Path -Algorithm MD5).Hash
 	}
 
-	# Throttled console progress (only updates on integer % change)
+	# Headless-safe console progress function
 	function Write-ProgressConsole {
 		param ([int]$Current, [int]$Total, [ref]$LastPercent)
-		if ($Total -le 0) { return }
+		if ($Total -le 0 -or -not [Environment]::UserInteractive) { return }
 		$percent = [int](($Current / $Total) * 100)
 		if ($percent -ne $LastPercent.Value) {
 			$LastPercent.Value = $percent
-			$barLength = [int]($percent / 2)
-			$progressBarText = ("#" * $barLength).PadRight(50)
-			$progressBarText = $progressBarText.Insert($barLength, "|").Insert(0, "|").PadRight(52) + " $percent%"
-			[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-			[System.Console]::WriteLine($progressBarText)
+			try {
+				$barLength = [int]($percent / 2)
+				$progressBarText = ("#" * $barLength).PadRight(50)
+				$progressBarText = $progressBarText.Insert($barLength, "|").Insert(0, "|").PadRight(52) + " $percent%"
+				[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
+				[System.Console]::WriteLine($progressBarText)
+			} catch {
+				# Suppress console errors if running under non-interactive host/VBS
+			}
 		}
 	}
 
@@ -124,7 +127,6 @@ try {
 	# --- INITIAL CHECKS ---
 	if (-not (Test-Path $bypass)) {
 		"0" | Set-Content $bypass
-		Write-Host "$bypass not found. Created with default content 0." -ForegroundColor Yellow
 	}
 
 	$bypassValue = (Get-Content $bypass -Raw).Trim()
@@ -134,7 +136,6 @@ try {
 
 	if ($bypassValue -eq "0") {
 		# --- DOWNLOAD MODE (IN-MEMORY) ---
-		Write-Host "Downloading hosts (GitHub-safe) ..." -ForegroundColor Cyan
 		$rawContent1 = Download-StringSafe -Url $url1
 		Start-Sleep -Milliseconds 500
 		$rawContent2 = Download-StringSafe -Url $url2
@@ -144,25 +145,19 @@ try {
 		$hash2 = Get-MemoryHash $rawContent2
 
 		if ((Get-FileHashMd5 $file1) -ne $hash1) {
-			Write-Host "$file1 is different. Staging update." -ForegroundColor Yellow
 			Save-FileAtomic -Path $file1 -Content $rawContent1
 		} else {
-			Write-Host "$file1 is up to date." -ForegroundColor Green
 			$source1UpToDate = $true
 		}
 
 		if ((Get-FileHashMd5 $file2) -ne $hash2) {
-			Write-Host "$file2 is different. Staging update." -ForegroundColor Yellow
 			Save-FileAtomic -Path $file2 -Content $rawContent2
 		} else {
-			Write-Host "$file2 is up to date." -ForegroundColor Green
 			$source2UpToDate = $true
 		}
 	} else {
 		# --- BYPASS MODE ---
-		Write-Host "Bypass enabled. Using existing host files directly." -ForegroundColor Yellow
 		if (-not (Test-Path $file1) -or -not (Test-Path $file2)) {
-			Write-Error "Bypass mode selected, but one or both host files do not exist."
 			exit 1
 		}
 		$file1Path = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($file1)
@@ -173,8 +168,6 @@ try {
 
 	# --- COMBINATION + CLEANUP IN MEMORY ---
 	if (-not $source1UpToDate -or -not $source2UpToDate -or -not (Test-Path $outputFile)) {
-		Write-Host "Processing hosts sources in memory..." -ForegroundColor Cyan
-
 		$lines1 = $rawContent1 -split "\r?\n"
 		$lines2 = $rawContent2 -split "\r?\n"
 		$allLines = [System.Collections.Generic.List[string]]::new($lines1.Length + $lines2.Length)
@@ -185,14 +178,14 @@ try {
 		$lastPct = -1
 		$total = $allLines.Count
 
-		Write-Host "Cleaning comments, applying allowlist rules, and removing duplicates..."
-		[System.Console]::WriteLine("Completion: [                    ]")
+		if ([Environment]::UserInteractive) {
+			try { [System.Console]::WriteLine("Completion: [                    ]") } catch {}
+		}
 
 		for ($i = 0; $i -lt $total; $i++) {
 			Write-ProgressConsole -Current $i -Total $total -LastPercent ([ref]$lastPct)
 
 			$line = $allLines[$i]
-			
 			if ($line -match '^\s*#') { continue }
 
 			if ($line -match '^(0\.0\.0\.0|127\.0\.0\.1)\s+(\S+)') {
@@ -204,41 +197,27 @@ try {
 
 			[void]$uniqueHosts.Add($line)
 		}
-		
-		[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-		[System.Console]::WriteLine("|##################################################| 100%")
 
 		Save-FileAtomic -Path $outputFile -Content $uniqueHosts
-		Write-Host "Replaced $outputFile atomically." -ForegroundColor Green
 	}
 
 	# --- ABUSEIPDB UPDATE CHECK (IN-MEMORY) ---
-	Write-Host ""
-	Write-Host "Checking AbuseIPDB source..." -ForegroundColor Cyan
-
 	$rawAbuseText = Download-StringSafe -Url $abuseIpUrl
 	$abuseHash = Get-MemoryHash $rawAbuseText
 
 	if ((Get-FileHashMd5 $abuseIpFile) -ne $abuseHash) {
-		Write-Host "$abuseIpFile is different. Staging update." -ForegroundColor Yellow
 		Save-FileAtomic -Path $abuseIpFile -Content $rawAbuseText
 	} else {
-		Write-Host "$abuseIpFile is up to date." -ForegroundColor Green
 		$abuseIpUpToDate = $true
 	}
 
 	# --- BLOCKLIST.DE UPDATE CHECK (IN-MEMORY) ---
-	Write-Host ""
-	Write-Host "Checking Blocklist.de source..." -ForegroundColor Cyan
-
 	$rawBlocklistDeText = Download-StringSafe -Url $blocklistDeUrl
 	$blocklistDeHash = Get-MemoryHash $rawBlocklistDeText
 
 	if ((Get-FileHashMd5 $blocklistDeFile) -ne $blocklistDeHash) {
-		Write-Host "$blocklistDeFile is different. Staging update." -ForegroundColor Yellow
 		Save-FileAtomic -Path $blocklistDeFile -Content $rawBlocklistDeText
 	} else {
-		Write-Host "$blocklistDeFile is up to date." -ForegroundColor Green
 		$blocklistDeUpToDate = $true
 	}
 
@@ -246,10 +225,6 @@ try {
 	$portmasterNeedsUpdate = (-not $source1UpToDate) -or (-not $source2UpToDate) -or (-not $abuseIpUpToDate) -or (-not $blocklistDeUpToDate) -or (-not (Test-Path $abuseIpCombined))
 
 	if ($portmasterNeedsUpdate) {
-		Write-Host ""
-		Write-Host "Creating $abuseIpCombined in memory..." -ForegroundColor Cyan
-
-		Write-Host "Extracting IPv4 addresses from AbuseIPDB list..."
 		$ipMatches = [regex]::Matches(
 			$rawAbuseText,
 			'(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)'
@@ -259,27 +234,25 @@ try {
 		foreach ($m in $ipMatches) {
 			$abuseContent.Add($m.Value)
 		}
-		Write-Host "Found $($abuseContent.Count) valid IPv4 addresses in AbuseIPDB." -ForegroundColor Green
 
-		Write-Host "Parsing Blocklist.de list..."
 		$blocklistDeLines = $rawBlocklistDeText -split "\r?\n"
-		Write-Host "Found $($blocklistDeLines.Length) IP lines in Blocklist.de." -ForegroundColor Green
 
-		Write-Host "Cleaning hosts list for Portmaster format..."
 		$outputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($outputFile)
 		$hostsLines = [System.IO.File]::ReadAllLines($outputPath)
 		$cleanHostsList = [System.Collections.Generic.List[string]]::new($hostsLines.Length)
 
 		$lastPct = -1
 		$total = $hostsLines.Length
-		[System.Console]::WriteLine("Completion: [                    ]")
+
+		if ([Environment]::UserInteractive) {
+			try { [System.Console]::WriteLine("Completion: [                    ]") } catch {}
+		}
 
 		for ($i = 0; $i -lt $total; $i++) {
 			Write-ProgressConsole -Current $i -Total $total -LastPercent ([ref]$lastPct)
 
 			$line = $hostsLines[$i]
 			$line = $line -replace '\s*#.*$', ''
-			# Strip standard host prefixes (IPv4, IPv6, Broadcast)
 			$line = $line -replace '^(0\.0\.0\.0|127\.0\.0\.1|::1|fe80::1%lo0|ff00::0|ff02::[123]|255\.255\.255\.255)\s+', ''
 			$line = $line.Trim()
 
@@ -288,21 +261,15 @@ try {
 			}
 		}
 
-		[System.Console]::SetCursorPosition(0, [System.Console]::CursorTop - 1)
-		[System.Console]::WriteLine("|##################################################| 100%")
-
-		Write-Host "Merging lists and removing duplicates..."
 		$portmasterSet = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
 		$portmasterSet.UnionWith([string[]]$cleanHostsList)
 		
-		# Merge AbuseIPDB entries
 		foreach ($ip in $abuseContent) {
 			if (-not $excludedSet.Contains($ip)) {
 				[void]$portmasterSet.Add($ip)
 			}
 		}
 
-		# Merge Blocklist.de entries
 		foreach ($line in $blocklistDeLines) {
 			$ip = $line.Trim()
 			if ($ip.Length -gt 0 -and -not $excludedSet.Contains($ip)) {
@@ -311,17 +278,12 @@ try {
 		}
 
 		Save-FileAtomic -Path $abuseIpCombined -Content $portmasterSet
-		Write-Host "Replaced $abuseIpCombined atomically." -ForegroundColor Green
-	} else {
-		Write-Host "All sources are up to date. Skipping Portmaster list rebuild." -ForegroundColor Green
 	}
 
 	# --- EXECUTE PYTHON SCRIPT HIDDEN ---
 	if (Test-Path $pythonPushScript) {
-		Write-Host "Executing Python script silently..." -ForegroundColor Cyan
-		Start-Process -FilePath "python.exe" -ArgumentList "`"$pythonPushScript`"" -WindowStyle Hidden -Wait
-	} else {
-		Write-Warning "Python script not found at path: $pythonPushScript"
+		$p = Start-Process -FilePath "python.exe" -ArgumentList "`"$pythonPushScript`"" -WindowStyle Hidden -PassThru
+		$p.WaitForExit()
 	}
 
 	# --- LOG SUCCESSFUL RUN ---
