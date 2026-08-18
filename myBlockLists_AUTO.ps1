@@ -280,16 +280,16 @@ try {
 		Save-FileAtomic -Path $abuseIpCombined -Content $portmasterSet
 	}
 
+	# --- LOG SUCCESSFUL RUN ---
+	$timestamp = (Get-Date).ToString("MM/dd/yyyy HH:mm:ss")
+	$logEntry = "$timestamp - Success"
+	Add-Content -Path $logFile -Value $logEntry -Encoding UTF8
+
 	# --- EXECUTE PYTHON SCRIPT HIDDEN ---
 	if (Test-Path $pythonPushScript) {
 		$p = Start-Process -FilePath "python.exe" -ArgumentList "`"$pythonPushScript`"" -WindowStyle Hidden -PassThru
 		$p.WaitForExit()
 	}
-
-	# --- LOG SUCCESSFUL RUN ---
-	$timestamp = (Get-Date).ToString("MM/dd/yyyy HH:mm:ss")
-	$logEntry = "$timestamp - Success"
-	Add-Content -Path $logFile -Value $logEntry -Encoding UTF8
 
 } finally {
 	# Cleanup leftover temp commit files if script was interrupted
