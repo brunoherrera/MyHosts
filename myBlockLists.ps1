@@ -14,11 +14,17 @@ try {
 
 	$abuseIpUrl = "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-365d.ipv4"
 	$abuseIpFile = "abuseipdb-s100-365d.txt"
+
+	# New Source: Blocklist.de (Plain 1 IP per line)
+	$blocklistDeUrl = "https://lists.blocklist.de/lists/all.txt"
+	$blocklistDeFile = "blocklist_de_all.txt"
+
 	$abuseIpCombined = "combined_portmaster_abuseipdb_list.txt"
 
 	$source1UpToDate = $false
 	$source2UpToDate = $false
 	$abuseIpUpToDate = $false
+	$blocklistDeUpToDate = $false
 
 	# Domains and system local entries to exclude from blocking ($O(1) HashSet)
 	[string[]]$excludedDomainsList = @(
@@ -221,10 +227,26 @@ try {
 		$abuseIpUpToDate = $true
 	}
 
+	# --- BLOCKLIST.DE UPDATE CHECK (IN-MEMORY) ---
+	Write-Host ""
+	Write-Host "Checking Blocklist.de source..." -ForegroundColor Cyan
+
+	$rawBlocklistDeText = Download-StringSafe -Url $blocklistDeUrl
+	$blocklistDeHash = Get-MemoryHash $rawBlocklistDeText
+
+	if ((Get-FileHashMd5 $blocklistDeFile) -ne $blocklistDeHash) {
+		Write-Host "$blocklistDeFile is different. Staging update." -ForegroundColor Yellow
+		Save-FileAtomic -Path $blocklistDeFile -Content $rawBlocklistDeText
+	} else {
+		Write-Host "$blocklistDeFile is up to date." -ForegroundColor Green
+		$blocklistDeUpToDate = $true
+	}
+
 	# --- CREATE COMBINED PORTMASTER LIST (IN-MEMORY) ---
-	$portmasterNeedsUpdate = (-not $source1UpToDate) -or (-not $source2UpToDate) -or (-not $abuseIpUpToDate) -or (-not (Test-Path $abuseIpCombined))
+	$portmasterNeedsUpdate = (-not $source1UpToDate) -or (-not $source2UpToDate) -or (-not $abuseIpUpToDate) -or (-not $blocklistDeUpToDate) -or (-not (Test-Path $abuseIpCombined))
 
 	if ($portmasterNeedsUpdate) {
+		Write-Host ""
 		Write-Host "Creating $abuseIpCombined in memory..." -ForegroundColor Cyan
 
 		Write-Host "Extracting IPv4 addresses from AbuseIPDB list..."
@@ -237,7 +259,11 @@ try {
 		foreach ($m in $ipMatches) {
 			$abuseContent.Add($m.Value)
 		}
-		Write-Host "Found $($abuseContent.Count) valid IPv4 addresses." -ForegroundColor Green
+		Write-Host "Found $($abuseContent.Count) valid IPv4 addresses in AbuseIPDB." -ForegroundColor Green
+
+		Write-Host "Parsing Blocklist.de list..."
+		$blocklistDeLines = $rawBlocklistDeText -split "\r?\n"
+		Write-Host "Found $($blocklistDeLines.Length) IP lines in Blocklist.de." -ForegroundColor Green
 
 		Write-Host "Cleaning hosts list for Portmaster format..."
 		$outputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($outputFile)
@@ -269,8 +295,17 @@ try {
 		$portmasterSet = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
 		$portmasterSet.UnionWith([string[]]$cleanHostsList)
 		
+		# Merge AbuseIPDB entries
 		foreach ($ip in $abuseContent) {
 			if (-not $excludedSet.Contains($ip)) {
+				[void]$portmasterSet.Add($ip)
+			}
+		}
+
+		# Merge Blocklist.de entries (Direct 1 IP per line)
+		foreach ($line in $blocklistDeLines) {
+			$ip = $line.Trim()
+			if ($ip.Length -gt 0 -and -not $excludedSet.Contains($ip)) {
 				[void]$portmasterSet.Add($ip)
 			}
 		}
