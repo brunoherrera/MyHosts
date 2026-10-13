@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-10-13 19:08:50 UTC
+# Last updated:           2026-10-13 19:38:05 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          738894
+# Number of ips:          738906
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -51621,6 +51621,7 @@
 31.14.190.74     # IT  AS206617  Neomedia S.r.l.
 31.14.201.161    # ES  AS29119   AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL
 31.14.210.55     # GR  AS3329    VODAFONE-PANAFON HELLENIC TELECOMMUNICATIONS COMPANY SA
+31.14.254.0      # GB  AS25369   Hydra Communications Ltd
 31.14.254.2      # GB  AS25369   Hydra Communications Ltd
 31.14.254.3      # GB  AS25369   Hydra Communications Ltd
 31.14.254.4      # GB  AS25369   Hydra Communications Ltd
@@ -163754,6 +163755,7 @@
 45.135.194.8     # DE  AS51396   Pfcloud UG
 45.135.194.9     # DE  AS51396   Pfcloud UG
 45.135.194.10    # DE  AS51396   Pfcloud UG
+45.135.194.13    # DE  AS51396   Pfcloud UG
 45.135.194.15    # DE  AS51396   Pfcloud UG
 45.135.194.20    # DE  AS51396   Pfcloud UG
 45.135.194.21    # DE  AS51396   Pfcloud UG
@@ -163808,6 +163810,7 @@
 45.135.194.108   # DE  AS51396   Pfcloud UG
 45.135.194.109   # DE  AS51396   Pfcloud UG
 45.135.194.111   # DE  AS51396   Pfcloud UG
+45.135.194.112   # DE  AS51396   Pfcloud UG
 45.135.194.113   # DE  AS51396   Pfcloud UG
 45.135.194.115   # DE  AS51396   Pfcloud UG
 45.135.194.116   # DE  AS51396   Pfcloud UG
@@ -171736,6 +171739,7 @@
 45.227.254.49    # LT  AS267784  Flyservers S.A.
 45.227.254.52    # LT  AS267784  Flyservers S.A.
 45.227.254.62    # LT  AS267784  Flyservers S.A.
+45.227.254.65    # LT  AS267784  Flyservers S.A.
 45.227.254.79    # LT  AS267784  Flyservers S.A.
 45.227.254.81    # LT  AS267784  Flyservers S.A.
 45.227.254.82    # LT  AS267784  Flyservers S.A.
@@ -217973,6 +217977,7 @@
 64.204.142.32    # US  AS3257    GTT Communications Inc.
 64.204.142.38    # US  AS3257    GTT Communications Inc.
 64.204.250.103   # US  AS400031  GigaPacket LLC
+64.205.72.0      # US  AS3257    GTT Communications Inc.
 64.205.72.2      # US  AS3257    GTT Communications Inc.
 64.205.72.3      # US  AS3257    GTT Communications Inc.
 64.205.72.4      # US  AS3257    GTT Communications Inc.
@@ -247198,6 +247203,7 @@
 77.67.9.210      # NL  AS3257    GTT Communications Inc.
 77.67.9.211      # NL  AS3257    GTT Communications Inc.
 77.67.9.216      # NL  AS3257    GTT Communications Inc.
+77.67.26.0       # GB  AS3257    GTT Communications Inc.
 77.67.26.2       # GB  AS3257    GTT Communications Inc.
 77.67.26.3       # GB  AS3257    GTT Communications Inc.
 77.67.26.4       # GB  AS3257    GTT Communications Inc.
@@ -247573,6 +247579,7 @@
 77.73.20.3       # FR  AS203061  UAB code200
 77.73.20.34      # FR  AS203061  UAB code200
 77.73.20.65      # FR  AS203061  UAB code200
+77.73.20.70      # FR  AS203061  UAB code200
 77.73.20.232     # FR  AS203061  UAB code200
 77.73.40.25      # ES  AS42493   Lorca TV Sol S.L.
 77.73.89.86      # RU  AS43567   UG-TELECOM Ltd.
@@ -292228,6 +292235,9 @@
 94.26.68.173     # BG  -         -
 94.26.68.195     # BG  -         -
 94.26.68.201     # BG  -         -
+94.26.68.202     # BG  -         -
+94.26.68.203     # BG  -         -
+94.26.68.204     # BG  -         -
 94.26.68.205     # BG  -         -
 94.26.68.206     # BG  -         -
 94.26.68.207     # BG  -         -
@@ -296555,6 +296565,7 @@
 94.249.187.125   # US  AS12586   GHOSTnet GmbH
 94.249.187.131   # US  AS12586   GHOSTnet GmbH
 94.249.187.133   # US  AS12586   GHOSTnet GmbH
+94.249.187.144   # US  AS12586   GHOSTnet GmbH
 94.249.187.147   # US  AS12586   GHOSTnet GmbH
 94.249.187.193   # US  AS12586   GHOSTnet GmbH
 94.249.188.39    # DE  AS12586   GHOSTnet GmbH
@@ -566741,6 +566752,7 @@
 172.182.207.4    # US  AS8075    Microsoft Corporation
 172.182.207.5    # US  AS8075    Microsoft Corporation
 172.182.207.6    # US  AS8075    Microsoft Corporation
+172.182.207.7    # US  AS8075    Microsoft Corporation
 172.182.207.8    # US  AS8075    Microsoft Corporation
 172.182.207.9    # US  AS8075    Microsoft Corporation
 172.182.207.10   # US  AS8075    Microsoft Corporation
