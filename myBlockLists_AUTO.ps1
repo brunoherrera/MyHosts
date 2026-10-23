@@ -35,7 +35,7 @@ try {
 		'nllapps.com', 'gleamio.com', 'www.ustream.tv', 'www.ipify.org',
 		'ipify.org', 'api.ipify.org', 'coinfaucet.eu', 'api64.ipify.org',
 		'api6.ipify.org', 'api4.ipify.org', 'geo.ipify.org', 'smartlock.google.com',
-		'id.google.com.uy', 'click.redditmail.com', 'freedns.afraid.org', 'adx.telegram.com',
+		'id.google.com.uy', 'click.redditmail.com', 'freedns.afraid.org', 'adx.telegram.com', 'ultracell.co.uk/',
 		# Localhost & Loopback exclusions
 		'localhost', 'localhost.localdomain', 'local', 'broadcasthost', '255.255.255.255 broadcasthost',
 		'ip6-localhost', 'ip6-loopback', 'fe80::1%lo0 localhost', 'ip6-localnet', 'ff00::0 ip6-localnet',
