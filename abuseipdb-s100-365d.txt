@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-10-26 19:39:21 UTC
+# Last updated:           2026-10-26 20:41:39 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          735037
+# Number of ips:          735089
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -14471,6 +14471,7 @@
 5.231.108.212    # DE  AS213250  Dominic Scholz trading as ITP-Solutions GmbH & Co. KG
 5.231.116.2      # DE  AS58087   Florian Kolb
 5.231.118.32     # DE  AS12586   GHOSTnet GmbH
+5.231.118.67     # DE  AS12586   GHOSTnet GmbH
 5.231.118.75     # DE  AS12586   GHOSTnet GmbH
 5.231.118.85     # DE  AS12586   GHOSTnet GmbH
 5.231.118.89     # DE  AS12586   GHOSTnet GmbH
@@ -169058,6 +169059,7 @@
 45.135.193.209   # DE  AS51396   Pfcloud UG
 45.135.193.212   # DE  AS51396   Pfcloud UG
 45.135.193.213   # DE  AS51396   Pfcloud UG
+45.135.193.215   # DE  AS51396   Pfcloud UG
 45.135.193.217   # DE  AS51396   Pfcloud UG
 45.135.193.218   # DE  AS51396   Pfcloud UG
 45.135.193.225   # DE  AS51396   Pfcloud UG
@@ -169130,6 +169132,8 @@
 45.135.194.115   # DE  AS51396   Pfcloud UG
 45.135.194.116   # DE  AS51396   Pfcloud UG
 45.135.194.117   # DE  AS51396   Pfcloud UG
+45.135.194.119   # DE  AS51396   Pfcloud UG
+45.135.194.127   # DE  AS51396   Pfcloud UG
 45.135.194.136   # DE  AS51396   Pfcloud UG
 45.135.194.138   # DE  AS51396   Pfcloud UG
 45.135.194.150   # DE  AS51396   Pfcloud UG
@@ -170077,6 +170081,7 @@
 45.141.233.157   # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.158   # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.188   # PL  AS201814  MEVSPACE sp. z o.o.
+45.141.233.190   # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.192   # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.193   # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.194   # PL  AS201814  MEVSPACE sp. z o.o.
@@ -172523,6 +172528,15 @@
 45.156.128.213   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
 45.156.128.214   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
 45.156.128.215   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.219   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.220   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.221   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.222   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.224   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.225   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.226   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.227   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
+45.156.128.229   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
 45.156.128.230   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
 45.156.128.231   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
 45.156.128.232   # NL  AS211680  NSEC - Sistemas Informaticos, S.A.
@@ -231435,7 +231449,9 @@
 66.132.159.71    # US  AS398324  Censys, Inc.
 66.132.159.72    # US  AS398324  Censys, Inc.
 66.132.159.73    # US  AS398324  Censys, Inc.
+66.132.159.74    # US  AS398324  Censys, Inc.
 66.132.159.75    # US  AS398324  Censys, Inc.
+66.132.159.76    # US  AS398324  Censys, Inc.
 66.132.159.77    # US  AS398324  Censys, Inc.
 66.132.159.78    # US  AS398324  Censys, Inc.
 66.132.159.79    # US  AS398324  Censys, Inc.
@@ -231473,6 +231489,7 @@
 66.132.159.113   # US  AS398324  Censys, Inc.
 66.132.159.114   # US  AS398324  Censys, Inc.
 66.132.159.115   # US  AS398324  Censys, Inc.
+66.132.159.116   # US  AS398324  Censys, Inc.
 66.132.159.117   # US  AS398324  Censys, Inc.
 66.132.159.118   # US  AS398324  Censys, Inc.
 66.132.159.119   # US  AS398324  Censys, Inc.
@@ -231490,6 +231507,7 @@
 66.132.159.132   # US  AS398324  Censys, Inc.
 66.132.159.133   # US  AS398324  Censys, Inc.
 66.132.159.134   # US  AS398324  Censys, Inc.
+66.132.159.135   # US  AS398324  Censys, Inc.
 66.132.159.136   # US  AS398324  Censys, Inc.
 66.132.159.137   # US  AS398324  Censys, Inc.
 66.132.159.138   # US  AS398324  Censys, Inc.
@@ -433985,6 +434003,7 @@
 138.199.40.33    # US  AS60068   Datacamp Limited
 138.199.40.37    # US  AS60068   Datacamp Limited
 138.199.40.39    # US  AS60068   Datacamp Limited
+138.199.40.58    # US  AS60068   Datacamp Limited
 138.199.40.163   # US  AS60068   Datacamp Limited
 138.199.40.165   # US  AS60068   Datacamp Limited
 138.199.40.168   # US  AS60068   Datacamp Limited
@@ -579198,6 +579217,7 @@
 176.65.134.63    # SI  AS36680   Netiface LLC
 176.65.134.65    # SI  AS36680   Netiface LLC
 176.65.134.67    # SI  AS36680   Netiface LLC
+176.65.134.73    # SI  AS36680   Netiface LLC
 176.65.134.92    # SI  AS36680   Netiface LLC
 176.65.134.118   # SI  AS36680   Netiface LLC
 176.65.134.119   # SI  AS36680   Netiface LLC
@@ -579751,6 +579771,7 @@
 176.65.149.114   # NL  AS51396   Pfcloud UG
 176.65.149.116   # NL  AS51396   Pfcloud UG
 176.65.149.118   # NL  AS51396   Pfcloud UG
+176.65.149.119   # NL  AS51396   Pfcloud UG
 176.65.149.120   # NL  AS51396   Pfcloud UG
 176.65.149.124   # NL  AS51396   Pfcloud UG
 176.65.149.126   # NL  AS51396   Pfcloud UG
@@ -618680,7 +618701,9 @@
 185.136.15.11    # KZ  -         -
 185.136.15.12    # KZ  -         -
 185.136.15.13    # KZ  -         -
+185.136.15.14    # KZ  -         -
 185.136.15.15    # KZ  -         -
+185.136.15.16    # KZ  -         -
 185.136.15.17    # KZ  -         -
 185.136.15.19    # KZ  -         -
 185.136.15.20    # KZ  -         -
@@ -618692,6 +618715,7 @@
 185.136.15.26    # KZ  -         -
 185.136.15.27    # KZ  -         -
 185.136.15.28    # KZ  -         -
+185.136.15.29    # KZ  -         -
 185.136.15.30    # KZ  -         -
 185.136.15.31    # KZ  -         -
 185.136.15.36    # KZ  -         -
@@ -618708,6 +618732,7 @@
 185.136.15.110   # KZ  -         -
 185.136.15.111   # KZ  -         -
 185.136.15.153   # KZ  -         -
+185.136.15.186   # KZ  -         -
 185.136.38.231   # FI  AS49826   Lounea Palvelut Oy
 185.136.77.176   # RU  AS41275   Lovitel LLC
 185.136.78.173   # RU  AS41275   Lovitel LLC
@@ -624307,6 +624332,30 @@
 185.226.198.5    # US  AS211680  NSEC - Sistemas Informaticos, S.A.
 185.226.198.6    # US  AS211680  NSEC - Sistemas Informaticos, S.A.
 185.226.198.7    # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.20   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.21   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.22   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.23   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.25   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.26   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.27   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.28   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.30   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.31   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.32   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.33   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.35   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.36   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.37   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.38   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.40   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.41   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.42   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.43   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.45   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.46   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.47   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
+185.226.198.48   # US  AS211680  NSEC - Sistemas Informaticos, S.A.
 185.226.228.251  # ES  AS58327   FIBERGREEN TECNOLOGICAS S.L.
 185.226.232.56   # ES  AS205179  Virtualdeploy SL
 185.226.232.105  # ES  AS205179  Virtualdeploy SL
@@ -657738,6 +657787,7 @@
 193.24.211.222   # BG  AS215929  Data Campus Limited
 193.24.211.223   # BG  AS215929  Data Campus Limited
 193.24.211.224   # BG  AS215929  Data Campus Limited
+193.24.211.225   # BG  AS215929  Data Campus Limited
 193.24.211.227   # BG  AS215929  Data Campus Limited
 193.24.211.230   # BG  AS215929  Data Campus Limited
 193.24.211.234   # BG  AS215929  Data Campus Limited
@@ -669783,6 +669833,7 @@
 195.177.94.42    # FR  AS214961  Stellar Group SAS
 195.177.94.43    # FR  AS214961  Stellar Group SAS
 195.177.94.44    # FR  AS214961  Stellar Group SAS
+195.177.94.45    # FR  AS214961  Stellar Group SAS
 195.177.94.46    # FR  AS214961  Stellar Group SAS
 195.177.94.48    # FR  AS214961  Stellar Group SAS
 195.177.94.49    # FR  AS214961  Stellar Group SAS
@@ -710355,6 +710406,7 @@
 212.23.222.71    # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.74    # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.97    # PL  AS201814  MEVSPACE sp. z o.o.
+212.23.222.109   # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.131   # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.144   # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.145   # PL  AS201814  MEVSPACE sp. z o.o.
