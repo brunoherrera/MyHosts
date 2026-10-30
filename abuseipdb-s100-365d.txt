@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-10-30 19:34:05 UTC
+# Last updated:           2026-10-30 20:35:00 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          736030
+# Number of ips:          736059
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -133266,6 +133266,7 @@
 37.77.150.72     # RU  -         -
 37.77.150.78     # RU  -         -
 37.77.150.79     # RU  -         -
+37.77.150.82     # RU  -         -
 37.77.150.83     # RU  -         -
 37.77.150.86     # RU  -         -
 37.77.150.89     # RU  -         -
@@ -171016,6 +171017,15 @@
 45.140.222.168   # NL  AS49870   Alsycon B.V.
 45.140.222.169   # NL  AS49870   Alsycon B.V.
 45.140.222.170   # NL  AS49870   Alsycon B.V.
+45.140.222.172   # NL  AS49870   Alsycon B.V.
+45.140.222.179   # NL  AS49870   Alsycon B.V.
+45.140.222.189   # NL  AS49870   Alsycon B.V.
+45.140.222.192   # NL  AS49870   Alsycon B.V.
+45.140.222.196   # NL  AS49870   Alsycon B.V.
+45.140.222.199   # NL  AS49870   Alsycon B.V.
+45.140.222.200   # NL  AS49870   Alsycon B.V.
+45.140.222.201   # NL  AS49870   Alsycon B.V.
+45.140.222.203   # NL  AS49870   Alsycon B.V.
 45.140.225.38    # IR  AS44285   Sefroyek Pardaz Engineering PJSC
 45.140.225.52    # IR  AS44285   Sefroyek Pardaz Engineering PJSC
 45.140.225.62    # IR  AS44285   Sefroyek Pardaz Engineering PJSC
@@ -171725,12 +171735,20 @@
 45.144.212.98    # NL  AS214940  KPROHOST LLC
 45.144.212.99    # NL  AS214940  KPROHOST LLC
 45.144.212.111   # NL  AS214940  KPROHOST LLC
+45.144.212.112   # NL  AS214940  KPROHOST LLC
+45.144.212.113   # NL  AS214940  KPROHOST LLC
+45.144.212.114   # NL  AS214940  KPROHOST LLC
+45.144.212.115   # NL  AS214940  KPROHOST LLC
 45.144.212.120   # NL  AS214940  KPROHOST LLC
 45.144.212.121   # NL  AS214940  KPROHOST LLC
 45.144.212.133   # NL  AS214940  KPROHOST LLC
 45.144.212.134   # NL  AS214940  KPROHOST LLC
 45.144.212.136   # NL  AS214940  KPROHOST LLC
+45.144.212.141   # NL  AS214940  KPROHOST LLC
 45.144.212.142   # NL  AS214940  KPROHOST LLC
+45.144.212.143   # NL  AS214940  KPROHOST LLC
+45.144.212.146   # NL  AS214940  KPROHOST LLC
+45.144.212.147   # NL  AS214940  KPROHOST LLC
 45.144.212.157   # NL  AS214940  KPROHOST LLC
 45.144.212.159   # NL  AS214940  KPROHOST LLC
 45.144.212.169   # NL  AS214940  KPROHOST LLC
@@ -252102,6 +252120,7 @@
 77.73.20.58      # FR  AS203061  UAB code200
 77.73.20.65      # FR  AS203061  UAB code200
 77.73.20.70      # FR  AS203061  UAB code200
+77.73.20.86      # FR  AS203061  UAB code200
 77.73.20.218     # FR  AS203061  UAB code200
 77.73.20.232     # FR  AS203061  UAB code200
 77.73.40.25      # ES  AS42493   Lorca TV Sol S.L.
@@ -295610,7 +295629,11 @@
 94.26.68.168     # BG  -         -
 94.26.68.169     # BG  -         -
 94.26.68.173     # BG  -         -
+94.26.68.179     # BG  -         -
+94.26.68.181     # BG  -         -
 94.26.68.182     # BG  -         -
+94.26.68.183     # BG  -         -
+94.26.68.185     # BG  -         -
 94.26.68.195     # BG  -         -
 94.26.68.201     # BG  -         -
 94.26.68.202     # BG  -         -
@@ -297130,6 +297153,7 @@
 94.154.32.70     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
 94.154.32.76     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
 94.154.32.77     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
+94.154.32.78     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
 94.154.32.80     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
 94.154.32.87     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
 94.154.32.89     # TR  AS210538  KEYUBU Internet ve Bilisim Tic. Ltd. Sti.
@@ -336796,6 +336820,7 @@
 104.245.240.105  # FI  AS213954  Global Transit Systems LLC
 104.245.245.15   # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.18   # PL  AS201814  MEVSPACE sp. z o.o.
+104.245.245.26   # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.27   # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.50   # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.53   # PL  AS201814  MEVSPACE sp. z o.o.
@@ -506420,6 +506445,7 @@
 160.119.76.157   # SC  AS7489    HostUS
 160.119.76.158   # SC  AS7489    HostUS
 160.119.76.159   # SC  AS7489    HostUS
+160.119.76.161   # SC  AS7489    HostUS
 160.119.76.165   # SC  AS7489    HostUS
 160.119.76.166   # SC  AS7489    HostUS
 160.119.76.168   # SC  AS7489    HostUS
@@ -506431,6 +506457,7 @@
 160.119.76.175   # SC  AS7489    HostUS
 160.119.76.176   # SC  AS7489    HostUS
 160.119.76.177   # SC  AS7489    HostUS
+160.119.76.178   # SC  AS7489    HostUS
 160.119.76.188   # SC  AS7489    HostUS
 160.119.76.200   # SC  AS7489    HostUS
 160.119.76.210   # SC  AS7489    HostUS
@@ -690507,6 +690534,7 @@
 205.169.39.201   # US  AS3356    Level 3 Parent, LLC
 205.169.39.202   # US  AS3356    Level 3 Parent, LLC
 205.169.39.203   # US  AS3356    Level 3 Parent, LLC
+205.169.39.204   # US  AS3356    Level 3 Parent, LLC
 205.169.39.205   # US  AS3356    Level 3 Parent, LLC
 205.169.39.206   # US  AS3356    Level 3 Parent, LLC
 205.169.39.207   # US  AS3356    Level 3 Parent, LLC
@@ -725551,6 +725579,7 @@
 217.217.97.25    # US  AS20326   TeraSwitch Networks Inc.
 217.217.97.43    # US  AS20326   TeraSwitch Networks Inc.
 217.217.97.44    # US  AS20326   TeraSwitch Networks Inc.
+217.217.97.50    # US  AS20326   TeraSwitch Networks Inc.
 217.217.97.51    # US  AS20326   TeraSwitch Networks Inc.
 217.217.97.56    # US  AS20326   TeraSwitch Networks Inc.
 217.217.97.59    # US  AS20326   TeraSwitch Networks Inc.
