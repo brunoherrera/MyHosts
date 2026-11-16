@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-11-16 21:06:58 UTC
+# Last updated:           2026-11-16 22:07:19 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          750382
+# Number of ips:          750397
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -11987,6 +11987,8 @@
 5.83.150.119     # DE  AS209874  Tech Tide Portugal Unipessoal LDA
 5.83.152.185     # DE  AS207252  Realtox Media
 5.83.158.2       # DE  -         -
+5.83.158.7       # DE  -         -
+5.83.158.80      # DE  -         -
 5.83.158.81      # DE  -         -
 5.83.158.82      # DE  -         -
 5.83.158.83      # DE  -         -
@@ -14343,6 +14345,7 @@
 5.231.108.163    # DE  AS213250  Dominic Scholz trading as ITP-Solutions GmbH & Co. KG
 5.231.108.212    # DE  AS213250  Dominic Scholz trading as ITP-Solutions GmbH & Co. KG
 5.231.116.2      # DE  AS58087   Florian Kolb
+5.231.117.209    # DE  AS12586   GHOSTnet GmbH
 5.231.118.32     # DE  AS12586   GHOSTnet GmbH
 5.231.118.67     # DE  AS12586   GHOSTnet GmbH
 5.231.118.75     # DE  AS12586   GHOSTnet GmbH
@@ -14371,6 +14374,7 @@
 5.231.123.81     # DE  AS12586   GHOSTnet GmbH
 5.231.123.85     # DE  AS12586   GHOSTnet GmbH
 5.231.123.91     # DE  AS12586   GHOSTnet GmbH
+5.231.123.101    # DE  AS12586   GHOSTnet GmbH
 5.231.123.131    # DE  AS12586   GHOSTnet GmbH
 5.231.123.179    # DE  AS12586   GHOSTnet GmbH
 5.231.123.239    # DE  AS12586   GHOSTnet GmbH
@@ -177262,6 +177266,7 @@
 45.135.194.71    # DE  AS51396   Pfcloud UG
 45.135.194.73    # DE  AS51396   Pfcloud UG
 45.135.194.74    # DE  AS51396   Pfcloud UG
+45.135.194.76    # DE  AS51396   Pfcloud UG
 45.135.194.78    # DE  AS51396   Pfcloud UG
 45.135.194.80    # DE  AS51396   Pfcloud UG
 45.135.194.81    # DE  AS51396   Pfcloud UG
@@ -178789,6 +178794,7 @@
 45.144.212.147   # NL  AS214940  KPROHOST LLC
 45.144.212.150   # NL  AS214940  KPROHOST LLC
 45.144.212.152   # NL  AS214940  KPROHOST LLC
+45.144.212.154   # NL  AS214940  KPROHOST LLC
 45.144.212.157   # NL  AS214940  KPROHOST LLC
 45.144.212.158   # NL  AS214940  KPROHOST LLC
 45.144.212.159   # NL  AS214940  KPROHOST LLC
@@ -260554,7 +260560,9 @@
 77.73.16.180     # PL  AS56628   STORMmedia sp. z o.o.
 77.73.20.3       # FR  AS203061  UAB code200
 77.73.20.34      # FR  AS203061  UAB code200
+77.73.20.43      # FR  AS203061  UAB code200
 77.73.20.45      # FR  AS203061  UAB code200
+77.73.20.53      # FR  AS203061  UAB code200
 77.73.20.58      # FR  AS203061  UAB code200
 77.73.20.65      # FR  AS203061  UAB code200
 77.73.20.70      # FR  AS203061  UAB code200
@@ -287673,6 +287681,7 @@
 88.214.26.140    # DE  AS35042   Layer7 Networks GmbH
 88.214.26.194    # DE  AS35042   Layer7 Networks GmbH
 88.214.26.216    # DE  AS35042   Layer7 Networks GmbH
+88.214.50.0      # RU  AS51396   Pfcloud UG
 88.214.50.11     # RU  AS51396   Pfcloud UG
 88.214.50.41     # RU  AS51396   Pfcloud UG
 88.214.50.45     # RU  AS51396   Pfcloud UG
@@ -307568,6 +307577,7 @@
 94.183.174.73    # IR  -         -
 94.183.174.77    # IR  -         -
 94.183.174.83    # IR  -         -
+94.183.174.86    # IR  -         -
 94.183.174.91    # IR  -         -
 94.183.174.93    # IR  -         -
 94.183.174.95    # IR  -         -
@@ -592598,6 +592608,7 @@
 176.65.149.126   # NL  AS51396   Pfcloud UG
 176.65.149.129   # NL  AS51396   Pfcloud UG
 176.65.149.130   # NL  AS51396   Pfcloud UG
+176.65.149.131   # NL  AS51396   Pfcloud UG
 176.65.149.132   # NL  AS51396   Pfcloud UG
 176.65.149.133   # NL  AS51396   Pfcloud UG
 176.65.149.134   # NL  AS51396   Pfcloud UG
@@ -628801,6 +628812,7 @@
 185.16.39.43     # PL  AS201814  MEVSPACE sp. z o.o.
 185.16.39.49     # PL  AS201814  MEVSPACE sp. z o.o.
 185.16.39.52     # PL  AS201814  MEVSPACE sp. z o.o.
+185.16.39.59     # PL  AS201814  MEVSPACE sp. z o.o.
 185.16.39.60     # PL  AS201814  MEVSPACE sp. z o.o.
 185.16.39.76     # PL  AS201814  MEVSPACE sp. z o.o.
 185.16.39.77     # PL  AS201814  MEVSPACE sp. z o.o.
@@ -635620,6 +635632,7 @@
 185.197.142.202  # IT  AS206961  Riccardo Gori
 185.197.151.244  # UA  AS49223   EVEREST TV AND RADIO COMPANY LLC
 185.197.163.38   # NL  AS60144   3W Infra B.V.
+185.197.182.0    # DE  AS205899  Khadamat Ertebati Pishkhan Arvin Chenaran Co.LLC
 185.197.194.42   # FR  AS51167   Contabo GmbH
 185.197.194.84   # FR  AS51167   Contabo GmbH
 185.197.194.99   # FR  AS51167   Contabo GmbH
@@ -638578,6 +638591,7 @@
 185.235.135.184  # UA  AS205673  Lanet Network Ltd
 185.235.142.139  # US  AS394814  ISP4Life INC
 185.235.146.29   # FR  AS39405   Eurofiber France SAS
+185.235.167.0    # HK  AS153656  OWGELS INTERNATIONAL CO., LIMITED
 185.235.186.86   # UA  AS198636  CAPSULA LTD
 185.235.196.13   # IR  AS216054  Taymaz Gostaran Naghshe Almas Co. ( Ltd )
 185.235.196.101  # IR  AS216054  Taymaz Gostaran Naghshe Almas Co. ( Ltd )
@@ -681719,6 +681733,7 @@
 194.180.48.130   # PL  AS201814  MEVSPACE sp. z o.o.
 194.180.48.131   # PL  AS201814  MEVSPACE sp. z o.o.
 194.180.48.134   # PL  AS201814  MEVSPACE sp. z o.o.
+194.180.48.135   # PL  AS201814  MEVSPACE sp. z o.o.
 194.180.48.136   # PL  AS201814  MEVSPACE sp. z o.o.
 194.180.48.138   # PL  AS201814  MEVSPACE sp. z o.o.
 194.180.48.139   # PL  AS201814  MEVSPACE sp. z o.o.
