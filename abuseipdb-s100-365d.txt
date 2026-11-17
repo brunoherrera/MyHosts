@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-11-17 00:18:51 UTC
+# Last updated:           2026-11-17 01:08:11 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          749356
+# Number of ips:          749582
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -3035,6 +3035,8 @@
 2.26.150.3       # GB  AS2856    British Telecommunications PLC
 2.26.150.4       # GB  AS2856    British Telecommunications PLC
 2.26.150.5       # GB  AS2856    British Telecommunications PLC
+2.26.150.46      # GB  AS2856    British Telecommunications PLC
+2.26.150.89      # GB  AS2856    British Telecommunications PLC
 2.26.151.83      # GB  AS2856    British Telecommunications PLC
 2.26.158.190     # GB  AS2856    British Telecommunications PLC
 2.26.161.5       # GB  AS2856    British Telecommunications PLC
@@ -15435,6 +15437,7 @@
 8.134.176.160    # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
 8.134.177.32     # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
 8.134.178.226    # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
+8.134.179.69     # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
 8.134.183.46     # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
 8.134.187.127    # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
 8.134.188.179    # CN  AS37963   Hangzhou Alibaba Advertising Co.,Ltd.
@@ -22447,6 +22450,7 @@
 13.140.229.150   # DE  -         -
 13.140.233.153   # DE  -         -
 13.140.242.159   # DE  -         -
+13.143.64.135    # US  -         -
 13.143.64.172    # US  -         -
 13.143.65.245    # US  -         -
 13.143.128.186   # US  -         -
@@ -44347,6 +44351,7 @@
 24.24.221.39     # US  AS20001   Charter Communications Inc
 24.24.244.67     # US  AS20001   Charter Communications Inc
 24.25.244.34     # US  AS20001   Charter Communications Inc
+24.25.248.72     # US  AS20001   Charter Communications Inc
 24.28.2.231      # US  AS11427   Charter Communications Inc
 24.29.210.134    # US  AS10796   Charter Communications Inc
 24.29.231.34     # US  AS10796   Charter Communications Inc
@@ -45217,6 +45222,7 @@
 24.168.89.155    # US  AS12271   Charter Communications Inc
 24.168.118.107   # US  AS12271   Charter Communications Inc
 24.168.118.200   # US  AS12271   Charter Communications Inc
+24.168.236.15    # US  AS11426   Charter Communications Inc
 24.170.11.29     # US  AS11427   Charter Communications Inc
 24.170.49.54     # US  AS11427   Charter Communications Inc
 24.170.228.52    # US  AS14291   Antietam Broadband
@@ -47071,6 +47077,7 @@
 27.24.91.169     # CN  AS4134    CHINANET-BACKBONE
 27.24.104.41     # CN  AS4134    CHINANET-BACKBONE
 27.24.104.47     # CN  AS4134    CHINANET-BACKBONE
+27.24.104.50     # CN  AS4134    CHINANET-BACKBONE
 27.24.104.158    # CN  AS4134    CHINANET-BACKBONE
 27.24.104.174    # CN  AS4134    CHINANET-BACKBONE
 27.24.104.190    # CN  AS4134    CHINANET-BACKBONE
@@ -49887,6 +49894,7 @@
 27.206.26.88     # CN  AS4837    CHINA UNICOM China169 Backbone
 27.206.28.33     # CN  AS4837    CHINA UNICOM China169 Backbone
 27.206.31.90     # CN  AS4837    CHINA UNICOM China169 Backbone
+27.206.37.70     # CN  AS4837    CHINA UNICOM China169 Backbone
 27.206.47.61     # CN  AS4837    CHINA UNICOM China169 Backbone
 27.206.49.90     # CN  AS4837    CHINA UNICOM China169 Backbone
 27.206.56.147    # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -50085,6 +50093,7 @@
 27.215.179.168   # CN  AS4837    CHINA UNICOM China169 Backbone
 27.215.180.182   # CN  AS4837    CHINA UNICOM China169 Backbone
 27.215.182.212   # CN  AS4837    CHINA UNICOM China169 Backbone
+27.215.183.171   # CN  AS4837    CHINA UNICOM China169 Backbone
 27.215.186.59    # CN  AS4837    CHINA UNICOM China169 Backbone
 27.215.208.202   # CN  AS4837    CHINA UNICOM China169 Backbone
 27.215.211.32    # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -52190,6 +52199,7 @@
 31.59.140.122    # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
 31.59.143.28     # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
 31.59.155.16     # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
+31.59.155.193    # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
 31.59.160.3      # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
 31.59.160.6      # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
 31.59.160.12     # TR  AS48678   PENTECH BILISIM TEKNOLOJILERI SANAYI VE TICARET LIMITED SIRKETi
@@ -53230,6 +53240,7 @@
 31.148.244.168   # RU  AS49811   Uzlovaya.net Ltd
 31.148.253.126   # UA  AS213187  Lider-net Ltd.
 31.149.235.89    # NL  AS1136    KPN B.V.
+31.150.23.57     # DE  AS9145    EWE TEL GmbH
 31.150.148.6     # DE  AS9145    EWE TEL GmbH
 31.151.35.180    # NL  AS33915   Vodafone Libertel B.V.
 31.151.70.150    # NL  AS33915   Vodafone Libertel B.V.
@@ -62572,6 +62583,7 @@
 34.24.239.42     # US  AS396982  Google LLC
 34.24.242.95     # US  AS396982  Google LLC
 34.24.242.135    # US  AS396982  Google LLC
+34.24.242.198    # US  AS396982  Google LLC
 34.24.243.233    # US  AS396982  Google LLC
 34.24.244.214    # US  AS396982  Google LLC
 34.24.244.242    # US  AS396982  Google LLC
@@ -77145,6 +77157,7 @@
 34.72.93.139     # US  AS396982  Google LLC
 34.72.95.0       # US  AS396982  Google LLC
 34.72.102.164    # US  AS396982  Google LLC
+34.72.108.165    # US  AS396982  Google LLC
 34.72.109.224    # US  AS396982  Google LLC
 34.72.111.104    # US  AS396982  Google LLC
 34.72.117.72     # US  AS396982  Google LLC
@@ -84511,6 +84524,7 @@
 34.82.170.141    # US  AS396982  Google LLC
 34.82.170.184    # US  AS396982  Google LLC
 34.82.172.228    # US  AS396982  Google LLC
+34.82.173.214    # US  AS396982  Google LLC
 34.82.174.128    # US  AS396982  Google LLC
 34.82.174.160    # US  AS396982  Google LLC
 34.82.175.191    # US  AS396982  Google LLC
@@ -99255,6 +99269,7 @@
 34.147.164.101   # GB  AS396982  Google LLC
 34.147.164.113   # GB  AS396982  Google LLC
 34.147.164.203   # GB  AS396982  Google LLC
+34.147.165.189   # GB  AS396982  Google LLC
 34.147.166.25    # GB  AS396982  Google LLC
 34.147.167.78    # GB  AS396982  Google LLC
 34.147.168.15    # GB  AS396982  Google LLC
@@ -101468,6 +101483,7 @@
 34.154.235.160   # IT  AS396982  Google LLC
 34.154.235.189   # IT  AS396982  Google LLC
 34.154.235.237   # IT  AS396982  Google LLC
+34.154.236.161   # IT  AS396982  Google LLC
 34.154.237.107   # IT  AS396982  Google LLC
 34.154.237.242   # IT  AS396982  Google LLC
 34.154.239.218   # IT  AS396982  Google LLC
@@ -101769,6 +101785,7 @@
 34.155.183.59    # FR  AS396982  Google LLC
 34.155.184.99    # FR  AS396982  Google LLC
 34.155.185.72    # FR  AS396982  Google LLC
+34.155.185.145   # FR  AS396982  Google LLC
 34.155.186.14    # FR  AS396982  Google LLC
 34.155.186.88    # FR  AS396982  Google LLC
 34.155.186.109   # FR  AS396982  Google LLC
@@ -101802,6 +101819,7 @@
 34.155.206.129   # FR  AS396982  Google LLC
 34.155.207.227   # FR  AS396982  Google LLC
 34.155.207.242   # FR  AS396982  Google LLC
+34.155.208.121   # FR  AS396982  Google LLC
 34.155.208.233   # FR  AS396982  Google LLC
 34.155.208.249   # FR  AS396982  Google LLC
 34.155.213.183   # FR  AS396982  Google LLC
@@ -114665,6 +114683,7 @@
 35.189.128.193   # JP  AS396982  Google LLC
 35.189.129.61    # JP  AS396982  Google LLC
 35.189.130.247   # JP  AS396982  Google LLC
+35.189.133.91    # JP  AS396982  Google LLC
 35.189.135.69    # JP  AS396982  Google LLC
 35.189.135.133   # JP  AS396982  Google LLC
 35.189.137.210   # JP  AS396982  Google LLC
@@ -115123,6 +115142,7 @@
 35.190.157.72    # US  AS396982  Google LLC
 35.190.157.150   # US  AS396982  Google LLC
 35.190.158.18    # US  AS396982  Google LLC
+35.190.159.5     # US  AS396982  Google LLC
 35.190.159.169   # US  AS396982  Google LLC
 35.190.160.56    # US  AS396982  Google LLC
 35.190.160.173   # US  AS396982  Google LLC
@@ -119105,6 +119125,7 @@
 35.200.156.140   # IN  AS396982  Google LLC
 35.200.157.86    # IN  AS396982  Google LLC
 35.200.160.36    # IN  AS396982  Google LLC
+35.200.160.76    # IN  AS396982  Google LLC
 35.200.161.92    # IN  AS396982  Google LLC
 35.200.161.241   # IN  AS396982  Google LLC
 35.200.162.76    # IN  AS396982  Google LLC
@@ -119134,6 +119155,7 @@
 35.200.181.254   # IN  AS396982  Google LLC
 35.200.182.50    # IN  AS396982  Google LLC
 35.200.183.172   # IN  AS396982  Google LLC
+35.200.184.72    # IN  AS396982  Google LLC
 35.200.184.161   # IN  AS396982  Google LLC
 35.200.185.13    # IN  AS396982  Google LLC
 35.200.185.17    # IN  AS396982  Google LLC
@@ -120092,6 +120114,7 @@
 35.203.127.136   # CA  AS396982  Google LLC
 35.203.127.178   # CA  AS396982  Google LLC
 35.203.128.34    # US  AS396982  Google LLC
+35.203.128.149   # US  AS396982  Google LLC
 35.203.130.38    # US  AS396982  Google LLC
 35.203.130.138   # US  AS396982  Google LLC
 35.203.130.183   # US  AS396982  Google LLC
@@ -134785,6 +134808,7 @@
 36.78.223.116    # ID  AS7713    PT Telekomunikasi Indonesia
 36.78.223.145    # ID  AS7713    PT Telekomunikasi Indonesia
 36.78.244.173    # ID  AS7713    PT Telekomunikasi Indonesia
+36.79.25.4       # ID  AS7713    PT Telekomunikasi Indonesia
 36.79.101.162    # ID  AS7713    PT Telekomunikasi Indonesia
 36.79.110.7      # ID  AS7713    PT Telekomunikasi Indonesia
 36.79.110.139    # ID  AS7713    PT Telekomunikasi Indonesia
@@ -138970,6 +138994,7 @@
 37.54.253.60     # UA  AS6849    JSC "Ukrtelecom"
 37.54.255.117    # UA  AS6849    JSC "Ukrtelecom"
 37.54.255.198    # UA  AS6849    JSC "Ukrtelecom"
+37.55.0.233      # UA  AS6849    JSC "Ukrtelecom"
 37.55.3.4        # UA  AS6849    JSC "Ukrtelecom"
 37.55.5.148      # UA  AS6849    JSC "Ukrtelecom"
 37.55.8.88       # UA  AS6849    JSC "Ukrtelecom"
@@ -142191,10 +142216,13 @@
 38.19.42.24      # CO  AS270075  SUPER REDES S.A.S
 38.19.72.87      # EC  AS22724   PUNTONET S.A.
 38.19.76.158     # EC  AS22724   PUNTONET S.A.
+38.19.91.20      # AR  AS174     Cogent Communications, LLC
 38.19.91.26      # AR  AS174     Cogent Communications, LLC
 38.19.91.27      # AR  AS174     Cogent Communications, LLC
 38.19.91.38      # AR  AS174     Cogent Communications, LLC
 38.19.91.40      # AR  AS174     Cogent Communications, LLC
+38.19.91.42      # AR  AS174     Cogent Communications, LLC
+38.19.91.50      # AR  AS174     Cogent Communications, LLC
 38.19.91.53      # AR  AS174     Cogent Communications, LLC
 38.19.91.54      # AR  AS174     Cogent Communications, LLC
 38.19.91.60      # AR  AS174     Cogent Communications, LLC
@@ -144560,6 +144588,7 @@
 38.170.193.18    # US  AS174     Cogent Communications, LLC
 38.171.11.131    # VE  AS61461   Airtek Solutions C.A.
 38.171.35.85     # VE  AS61461   Airtek Solutions C.A.
+38.171.75.127    # VE  AS61461   Airtek Solutions C.A.
 38.171.126.63    # VE  AS61461   Airtek Solutions C.A.
 38.171.157.105   # VE  AS61461   Airtek Solutions C.A.
 38.171.255.69    # VE  AS61461   Airtek Solutions C.A.
@@ -146348,6 +146377,7 @@
 39.64.9.139      # CN  AS4837    CHINA UNICOM China169 Backbone
 39.64.61.184     # CN  AS4837    CHINA UNICOM China169 Backbone
 39.64.84.105     # CN  AS4837    CHINA UNICOM China169 Backbone
+39.64.107.211    # CN  AS4837    CHINA UNICOM China169 Backbone
 39.64.114.93     # CN  AS4837    CHINA UNICOM China169 Backbone
 39.64.114.237    # CN  AS4837    CHINA UNICOM China169 Backbone
 39.64.140.157    # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -151865,6 +151895,7 @@
 41.225.13.147    # TN  AS37671   3S INF
 41.225.18.210    # TN  AS37671   3S INF
 41.225.72.82     # TN  AS37671   3S INF
+41.225.86.51     # TN  AS37671   3S INF
 41.225.152.91    # TN  AS37671   3S INF
 41.225.238.233   # TN  AS37671   3S INF
 41.226.3.22      # TN  AS37705   TOPNET
@@ -153149,6 +153180,7 @@
 42.113.119.163   # VN  AS18403   FPT Telecom Company
 42.113.122.175   # VN  AS18403   FPT Telecom Company
 42.113.126.3     # VN  AS18403   FPT Telecom Company
+42.113.128.12    # VN  AS18403   FPT Telecom Company
 42.113.131.53    # VN  AS18403   FPT Telecom Company
 42.113.135.66    # VN  AS18403   FPT Telecom Company
 42.113.162.223   # VN  AS18403   FPT Telecom Company
@@ -155095,6 +155127,7 @@
 43.132.148.20    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 43.132.150.89    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 43.132.151.98    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
+43.132.155.164   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 43.132.168.205   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 43.132.173.44    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 43.132.173.63    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
@@ -164972,6 +165005,7 @@
 45.41.105.44     # MM  AS9988    Myanma Posts and Telecommunications
 45.41.105.49     # MM  AS9988    Myanma Posts and Telecommunications
 45.41.105.71     # MM  AS9988    Myanma Posts and Telecommunications
+45.41.105.85     # MM  AS9988    Myanma Posts and Telecommunications
 45.41.105.87     # MM  AS9988    Myanma Posts and Telecommunications
 45.41.105.91     # MM  AS9988    Myanma Posts and Telecommunications
 45.41.105.100    # MM  AS9988    Myanma Posts and Telecommunications
@@ -170075,10 +170109,13 @@
 45.79.143.216    # US  AS63949   Akamai Connected Cloud
 45.79.145.34     # US  AS63949   Akamai Connected Cloud
 45.79.145.38     # US  AS63949   Akamai Connected Cloud
+45.79.145.49     # US  AS63949   Akamai Connected Cloud
 45.79.145.53     # US  AS63949   Akamai Connected Cloud
+45.79.145.67     # US  AS63949   Akamai Connected Cloud
 45.79.145.88     # US  AS63949   Akamai Connected Cloud
 45.79.145.93     # US  AS63949   Akamai Connected Cloud
 45.79.145.94     # US  AS63949   Akamai Connected Cloud
+45.79.145.99     # US  AS63949   Akamai Connected Cloud
 45.79.145.104    # US  AS63949   Akamai Connected Cloud
 45.79.145.105    # US  AS63949   Akamai Connected Cloud
 45.79.145.135    # US  AS63949   Akamai Connected Cloud
@@ -190042,6 +190079,7 @@
 46.116.186.244   # IL  AS1680    Cellcom Fixed Line Communication L.P
 46.116.187.10    # IL  AS1680    Cellcom Fixed Line Communication L.P
 46.116.189.212   # IL  AS1680    Cellcom Fixed Line Communication L.P
+46.116.196.3     # IL  AS1680    Cellcom Fixed Line Communication L.P
 46.116.198.19    # IL  AS1680    Cellcom Fixed Line Communication L.P
 46.116.207.150   # IL  AS1680    Cellcom Fixed Line Communication L.P
 46.116.211.8     # IL  AS1680    Cellcom Fixed Line Communication L.P
@@ -204042,6 +204080,7 @@
 49.47.135.227    # IN  AS55836   Reliance Jio Infocomm Limited
 49.47.140.7      # IN  AS55836   Reliance Jio Infocomm Limited
 49.47.140.25     # IN  AS55836   Reliance Jio Infocomm Limited
+49.47.140.99     # IN  AS55836   Reliance Jio Infocomm Limited
 49.47.140.117    # IN  AS55836   Reliance Jio Infocomm Limited
 49.47.141.8      # IN  AS55836   Reliance Jio Infocomm Limited
 49.47.141.43     # IN  AS55836   Reliance Jio Infocomm Limited
@@ -204277,6 +204316,7 @@
 49.51.132.100    # DE  AS132203  Tencent Building, Kejizhongyi Avenue
 49.51.134.198    # DE  AS132203  Tencent Building, Kejizhongyi Avenue
 49.51.135.72     # DE  AS132203  Tencent Building, Kejizhongyi Avenue
+49.51.136.11     # DE  AS132203  Tencent Building, Kejizhongyi Avenue
 49.51.136.127    # DE  AS132203  Tencent Building, Kejizhongyi Avenue
 49.51.138.225    # DE  AS132203  Tencent Building, Kejizhongyi Avenue
 49.51.141.76     # DE  AS132203  Tencent Building, Kejizhongyi Avenue
@@ -217718,6 +217758,7 @@
 58.153.20.131    # HK  AS4760    HKT Limited
 58.153.25.30     # HK  AS4760    HKT Limited
 58.153.33.13     # HK  AS4760    HKT Limited
+58.153.33.35     # HK  AS4760    HKT Limited
 58.153.34.99     # HK  AS4760    HKT Limited
 58.153.54.50     # HK  AS4760    HKT Limited
 58.153.69.64     # HK  AS4760    HKT Limited
@@ -217950,6 +217991,7 @@
 58.210.197.34    # CN  AS4134    CHINANET-BACKBONE
 58.210.248.83    # CN  AS4134    CHINANET-BACKBONE
 58.211.23.172    # CN  AS140292  CHINATELECOM Jiangsu province Suzhou 5G network
+58.211.36.94     # CN  AS4134    CHINANET-BACKBONE
 58.211.39.86     # CN  AS4134    CHINANET-BACKBONE
 58.211.93.114    # CN  AS4134    CHINANET-BACKBONE
 58.211.122.46    # CN  AS4134    CHINANET-BACKBONE
@@ -223135,6 +223177,7 @@
 61.81.46.139     # KR  AS4766    Korea Telecom
 61.81.57.163     # KR  AS4766    Korea Telecom
 61.81.59.189     # KR  AS4766    Korea Telecom
+61.81.125.228    # KR  AS4766    Korea Telecom
 61.81.132.160    # KR  AS4766    Korea Telecom
 61.81.133.182    # KR  AS4766    Korea Telecom
 61.81.141.186    # KR  AS4766    Korea Telecom
@@ -224899,6 +224942,7 @@
 62.60.134.100    # GB  AS213990  AOFB Telecom Networks Ltd
 62.60.134.103    # GB  AS213990  AOFB Telecom Networks Ltd
 62.60.134.111    # GB  AS213990  AOFB Telecom Networks Ltd
+62.60.134.131    # GB  AS213990  AOFB Telecom Networks Ltd
 62.60.134.132    # GB  AS213990  AOFB Telecom Networks Ltd
 62.60.134.134    # GB  AS213990  AOFB Telecom Networks Ltd
 62.60.134.142    # GB  AS213990  AOFB Telecom Networks Ltd
@@ -232384,6 +232428,7 @@
 64.227.19.202    # US  AS14061   DigitalOcean, LLC
 64.227.19.248    # US  AS14061   DigitalOcean, LLC
 64.227.20.3      # US  AS14061   DigitalOcean, LLC
+64.227.20.21     # US  AS14061   DigitalOcean, LLC
 64.227.20.36     # US  AS14061   DigitalOcean, LLC
 64.227.20.85     # US  AS14061   DigitalOcean, LLC
 64.227.20.91     # US  AS14061   DigitalOcean, LLC
@@ -258888,6 +258933,7 @@
 76.36.253.155    # US  AS11426   Charter Communications Inc
 76.36.254.69     # US  AS11426   Charter Communications Inc
 76.36.254.73     # US  AS11426   Charter Communications Inc
+76.36.254.112    # US  AS11426   Charter Communications Inc
 76.37.8.128      # US  AS11351   Charter Communications Inc
 76.37.28.126     # US  AS11351   Charter Communications Inc
 76.37.32.179     # US  AS11351   Charter Communications Inc
@@ -270270,6 +270316,7 @@
 81.163.30.15     # RU  AS50340   JSC Selectel
 81.163.56.34     # RU  AS57227   Subnet LLC
 81.163.56.79     # RU  AS57227   Subnet LLC
+81.163.99.129    # RU  AS51645   JSC "ER-Telecom Holding"
 81.163.107.166   # RU  AS51645   JSC "ER-Telecom Holding"
 81.163.113.11    # UA  AS42530   TOV "Telecommunication company "Plazma"
 81.163.113.115   # UA  AS42530   TOV "Telecommunication company "Plazma"
@@ -274386,21 +274433,39 @@
 83.142.30.144    # NL  AS207513  LLC "HOSTOFF CSL"
 83.142.30.146    # NL  AS207513  LLC "HOSTOFF CSL"
 83.142.55.103    # US  AS26548   PureVoltage Hosting Inc.
+83.142.111.2     # UA  AS15713   LLC Global-City-Net
+83.142.111.20    # UA  AS15713   LLC Global-City-Net
 83.142.111.25    # UA  AS15713   LLC Global-City-Net
+83.142.111.26    # UA  AS15713   LLC Global-City-Net
+83.142.111.36    # UA  AS15713   LLC Global-City-Net
+83.142.111.37    # UA  AS15713   LLC Global-City-Net
 83.142.111.51    # UA  AS15713   LLC Global-City-Net
+83.142.111.53    # UA  AS15713   LLC Global-City-Net
 83.142.111.54    # UA  AS15713   LLC Global-City-Net
+83.142.111.70    # UA  AS15713   LLC Global-City-Net
 83.142.111.86    # UA  AS15713   LLC Global-City-Net
+83.142.111.90    # UA  AS15713   LLC Global-City-Net
+83.142.111.110   # UA  AS15713   LLC Global-City-Net
 83.142.111.116   # UA  AS15713   LLC Global-City-Net
+83.142.111.122   # UA  AS15713   LLC Global-City-Net
+83.142.111.131   # UA  AS15713   LLC Global-City-Net
 83.142.111.147   # UA  AS15713   LLC Global-City-Net
 83.142.111.150   # UA  AS15713   LLC Global-City-Net
 83.142.111.178   # UA  AS15713   LLC Global-City-Net
+83.142.111.184   # UA  AS15713   LLC Global-City-Net
 83.142.111.186   # UA  AS15713   LLC Global-City-Net
+83.142.111.189   # UA  AS15713   LLC Global-City-Net
 83.142.111.192   # UA  AS15713   LLC Global-City-Net
 83.142.111.196   # UA  AS15713   LLC Global-City-Net
+83.142.111.197   # UA  AS15713   LLC Global-City-Net
+83.142.111.199   # UA  AS15713   LLC Global-City-Net
+83.142.111.201   # UA  AS15713   LLC Global-City-Net
+83.142.111.206   # UA  AS15713   LLC Global-City-Net
 83.142.111.220   # UA  AS15713   LLC Global-City-Net
 83.142.111.223   # UA  AS15713   LLC Global-City-Net
 83.142.111.225   # UA  AS15713   LLC Global-City-Net
 83.142.111.227   # UA  AS15713   LLC Global-City-Net
+83.142.111.230   # UA  AS15713   LLC Global-City-Net
 83.142.111.241   # UA  AS15713   LLC Global-City-Net
 83.142.111.247   # UA  AS15713   LLC Global-City-Net
 83.142.116.154   # PL  AS41809   Netia SA
@@ -276763,11 +276828,13 @@
 84.54.73.94      # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.95      # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.96      # UZ  AS8193    "Uzbektelekom" Joint Stock Company
+84.54.73.97      # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.98      # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.112     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.113     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.115     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.120     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
+84.54.73.122     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.128     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.129     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
 84.54.73.130     # UZ  AS8193    "Uzbektelekom" Joint Stock Company
@@ -276993,6 +277060,7 @@
 84.118.20.106    # DE  AS3209    Vodafone GmbH
 84.118.88.229    # DE  AS3209    Vodafone GmbH
 84.118.165.250   # DE  AS3209    Vodafone GmbH
+84.118.193.156   # DE  AS3209    Vodafone GmbH
 84.119.166.43    # DE  AS3209    Vodafone GmbH
 84.122.116.224   # ES  AS6739    VODAFONE ONO, S.A.
 84.123.113.219   # ES  AS6739    VODAFONE ONO, S.A.
@@ -280143,6 +280211,7 @@
 85.155.14.49     # ES  -         -
 85.155.14.58     # ES  -         -
 85.155.14.60     # ES  -         -
+85.155.14.61     # ES  -         -
 85.155.14.245    # ES  -         -
 85.155.14.246    # ES  -         -
 85.155.14.247    # ES  -         -
@@ -293055,6 +293124,7 @@
 91.86.206.158    # BE  AS47377   Orange Belgium SA
 91.89.245.198    # DE  AS3209    Vodafone GmbH
 91.90.11.6       # UA  AS41631   Comfo LTD
+91.90.11.12      # UA  AS41631   Comfo LTD
 91.90.11.16      # UA  AS41631   Comfo LTD
 91.90.11.17      # UA  AS41631   Comfo LTD
 91.90.11.33      # UA  AS41631   Comfo LTD
@@ -294244,6 +294314,7 @@
 91.105.30.153    # LV  AS12578   SIA Tet
 91.105.161.7     # RU  AS21127   Joint Stock Company TransTeleCom
 91.105.232.142   # RU  AS12722   RECONN LLC
+91.106.36.5      # IQ  AS210402  Hala Al Rafidain Company for Communications and Internet LTD.
 91.106.36.29     # IQ  AS210402  Hala Al Rafidain Company for Communications and Internet LTD.
 91.106.36.177    # IQ  AS210402  Hala Al Rafidain Company for Communications and Internet LTD.
 91.106.39.249    # IQ  AS210402  Hala Al Rafidain Company for Communications and Internet LTD.
@@ -297186,6 +297257,7 @@
 91.219.80.149    # UA  AS51597   Fasttelekom Ltd.
 91.219.80.164    # UA  AS51597   Fasttelekom Ltd.
 91.219.80.167    # UA  AS51597   Fasttelekom Ltd.
+91.219.80.169    # UA  AS51597   Fasttelekom Ltd.
 91.219.80.210    # UA  AS51597   Fasttelekom Ltd.
 91.219.80.242    # UA  AS51597   Fasttelekom Ltd.
 91.219.81.235    # UA  AS51597   Fasttelekom Ltd.
@@ -299838,6 +299910,7 @@
 91.247.182.7     # UA  AS207558  Sergey Kus
 91.247.182.8     # UA  AS207558  Sergey Kus
 91.247.182.11    # UA  AS207558  Sergey Kus
+91.247.182.12    # UA  AS207558  Sergey Kus
 91.247.182.13    # UA  AS207558  Sergey Kus
 91.247.182.14    # UA  AS207558  Sergey Kus
 91.247.182.25    # UA  AS207558  Sergey Kus
@@ -299857,6 +299930,7 @@
 91.247.182.48    # UA  AS207558  Sergey Kus
 91.247.182.51    # UA  AS207558  Sergey Kus
 91.247.182.53    # UA  AS207558  Sergey Kus
+91.247.182.55    # UA  AS207558  Sergey Kus
 91.247.182.56    # UA  AS207558  Sergey Kus
 91.247.182.57    # UA  AS207558  Sergey Kus
 91.247.182.58    # UA  AS207558  Sergey Kus
@@ -299900,6 +299974,7 @@
 91.247.182.120   # UA  AS207558  Sergey Kus
 91.247.182.122   # UA  AS207558  Sergey Kus
 91.247.182.126   # UA  AS207558  Sergey Kus
+91.247.182.127   # UA  AS207558  Sergey Kus
 91.247.182.138   # UA  AS207558  Sergey Kus
 91.247.182.156   # UA  AS207558  Sergey Kus
 91.247.186.226   # UA  AS49223   EVEREST TV AND RADIO COMPANY LLC
@@ -302314,6 +302389,7 @@
 93.51.98.234     # IT  AS12874   Fastweb SpA
 93.51.102.38     # IT  AS12874   Fastweb SpA
 93.51.116.48     # IT  AS12874   Fastweb SpA
+93.51.158.104    # IT  AS12874   Fastweb SpA
 93.51.221.132    # IT  AS12874   Fastweb SpA
 93.51.226.100    # IT  AS12874   Fastweb SpA
 93.51.226.101    # IT  AS12874   Fastweb SpA
@@ -302487,6 +302563,7 @@
 93.89.225.201    # TR  AS51557   Isimtescil Bilisim A.S.
 93.89.232.2      # TR  AS51557   Isimtescil Bilisim A.S.
 93.90.0.215      # DK  AS31027   GlobalConnect A/S
+93.90.32.94      # RU  AS12714   PJSC MegaFon
 93.90.32.253     # RU  AS12714   PJSC MegaFon
 93.90.33.80      # RU  AS12714   PJSC MegaFon
 93.90.34.71      # RU  AS12714   PJSC MegaFon
@@ -304589,6 +304666,7 @@
 94.26.106.236    # DE  AS215607  dataforest GmbH
 94.26.106.239    # DE  AS215607  dataforest GmbH
 94.26.106.240    # DE  AS215607  dataforest GmbH
+94.26.106.243    # DE  AS215607  dataforest GmbH
 94.26.106.246    # DE  AS215607  dataforest GmbH
 94.26.106.248    # DE  AS215607  dataforest GmbH
 94.26.106.252    # DE  AS215607  dataforest GmbH
@@ -306761,6 +306839,7 @@
 94.158.62.14     # UZ  AS43060   IPLUS LLC
 94.158.62.16     # UZ  AS43060   IPLUS LLC
 94.158.62.18     # UZ  AS43060   IPLUS LLC
+94.158.62.19     # UZ  AS43060   IPLUS LLC
 94.158.62.22     # UZ  AS43060   IPLUS LLC
 94.158.62.24     # UZ  AS43060   IPLUS LLC
 94.158.62.26     # UZ  AS43060   IPLUS LLC
@@ -306770,9 +306849,11 @@
 94.158.62.34     # UZ  AS43060   IPLUS LLC
 94.158.62.35     # UZ  AS43060   IPLUS LLC
 94.158.62.37     # UZ  AS43060   IPLUS LLC
+94.158.62.40     # UZ  AS43060   IPLUS LLC
 94.158.62.41     # UZ  AS43060   IPLUS LLC
 94.158.62.43     # UZ  AS43060   IPLUS LLC
 94.158.62.47     # UZ  AS43060   IPLUS LLC
+94.158.62.48     # UZ  AS43060   IPLUS LLC
 94.158.62.50     # UZ  AS43060   IPLUS LLC
 94.158.62.54     # UZ  AS43060   IPLUS LLC
 94.158.62.56     # UZ  AS43060   IPLUS LLC
@@ -306781,8 +306862,11 @@
 94.158.62.59     # UZ  AS43060   IPLUS LLC
 94.158.62.60     # UZ  AS43060   IPLUS LLC
 94.158.62.62     # UZ  AS43060   IPLUS LLC
+94.158.62.65     # UZ  AS43060   IPLUS LLC
 94.158.62.69     # UZ  AS43060   IPLUS LLC
 94.158.62.70     # UZ  AS43060   IPLUS LLC
+94.158.62.73     # UZ  AS43060   IPLUS LLC
+94.158.62.76     # UZ  AS43060   IPLUS LLC
 94.158.62.78     # UZ  AS43060   IPLUS LLC
 94.158.62.79     # UZ  AS43060   IPLUS LLC
 94.158.62.87     # UZ  AS43060   IPLUS LLC
@@ -306808,6 +306892,7 @@
 94.158.62.123    # UZ  AS43060   IPLUS LLC
 94.158.62.124    # UZ  AS43060   IPLUS LLC
 94.158.62.125    # UZ  AS43060   IPLUS LLC
+94.158.62.126    # UZ  AS43060   IPLUS LLC
 94.158.62.128    # UZ  AS43060   IPLUS LLC
 94.158.62.133    # UZ  AS43060   IPLUS LLC
 94.158.62.134    # UZ  AS43060   IPLUS LLC
@@ -306818,14 +306903,19 @@
 94.158.62.140    # UZ  AS43060   IPLUS LLC
 94.158.62.142    # UZ  AS43060   IPLUS LLC
 94.158.62.144    # UZ  AS43060   IPLUS LLC
+94.158.62.148    # UZ  AS43060   IPLUS LLC
 94.158.62.150    # UZ  AS43060   IPLUS LLC
 94.158.62.155    # UZ  AS43060   IPLUS LLC
+94.158.62.157    # UZ  AS43060   IPLUS LLC
 94.158.62.158    # UZ  AS43060   IPLUS LLC
 94.158.62.159    # UZ  AS43060   IPLUS LLC
 94.158.62.160    # UZ  AS43060   IPLUS LLC
+94.158.62.162    # UZ  AS43060   IPLUS LLC
 94.158.62.163    # UZ  AS43060   IPLUS LLC
+94.158.62.165    # UZ  AS43060   IPLUS LLC
 94.158.62.166    # UZ  AS43060   IPLUS LLC
 94.158.62.167    # UZ  AS43060   IPLUS LLC
+94.158.62.168    # UZ  AS43060   IPLUS LLC
 94.158.62.169    # UZ  AS43060   IPLUS LLC
 94.158.62.170    # UZ  AS43060   IPLUS LLC
 94.158.62.171    # UZ  AS43060   IPLUS LLC
@@ -306837,28 +306927,36 @@
 94.158.62.180    # UZ  AS43060   IPLUS LLC
 94.158.62.182    # UZ  AS43060   IPLUS LLC
 94.158.62.184    # UZ  AS43060   IPLUS LLC
+94.158.62.186    # UZ  AS43060   IPLUS LLC
 94.158.62.187    # UZ  AS43060   IPLUS LLC
 94.158.62.190    # UZ  AS43060   IPLUS LLC
 94.158.62.193    # UZ  AS43060   IPLUS LLC
 94.158.62.197    # UZ  AS43060   IPLUS LLC
 94.158.62.199    # UZ  AS43060   IPLUS LLC
+94.158.62.204    # UZ  AS43060   IPLUS LLC
 94.158.62.205    # UZ  AS43060   IPLUS LLC
 94.158.62.206    # UZ  AS43060   IPLUS LLC
 94.158.62.207    # UZ  AS43060   IPLUS LLC
 94.158.62.213    # UZ  AS43060   IPLUS LLC
 94.158.62.214    # UZ  AS43060   IPLUS LLC
+94.158.62.219    # UZ  AS43060   IPLUS LLC
+94.158.62.220    # UZ  AS43060   IPLUS LLC
 94.158.62.221    # UZ  AS43060   IPLUS LLC
 94.158.62.223    # UZ  AS43060   IPLUS LLC
 94.158.62.224    # UZ  AS43060   IPLUS LLC
 94.158.62.225    # UZ  AS43060   IPLUS LLC
+94.158.62.226    # UZ  AS43060   IPLUS LLC
+94.158.62.229    # UZ  AS43060   IPLUS LLC
 94.158.62.231    # UZ  AS43060   IPLUS LLC
 94.158.62.234    # UZ  AS43060   IPLUS LLC
+94.158.62.235    # UZ  AS43060   IPLUS LLC
 94.158.62.237    # UZ  AS43060   IPLUS LLC
 94.158.62.238    # UZ  AS43060   IPLUS LLC
 94.158.62.243    # UZ  AS43060   IPLUS LLC
 94.158.62.246    # UZ  AS43060   IPLUS LLC
 94.158.62.248    # UZ  AS43060   IPLUS LLC
 94.158.62.251    # UZ  AS43060   IPLUS LLC
+94.158.62.254    # UZ  AS43060   IPLUS LLC
 94.158.95.244    # UA  AS43139   Maximum-Net LLC
 94.158.96.98     # RU  AS48036   OOO Scientific-Production Enterprise Edma
 94.158.101.94    # RU  AS48036   OOO Scientific-Production Enterprise Edma
@@ -310612,6 +310710,7 @@
 95.111.239.37    # FR  AS51167   Contabo GmbH
 95.111.239.70    # FR  AS51167   Contabo GmbH
 95.111.239.161   # FR  AS51167   Contabo GmbH
+95.111.239.164   # FR  AS51167   Contabo GmbH
 95.111.239.212   # FR  AS51167   Contabo GmbH
 95.111.240.93    # FR  AS51167   Contabo GmbH
 95.111.240.120   # FR  AS51167   Contabo GmbH
@@ -316688,6 +316787,7 @@
 101.32.191.177   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 101.32.191.180   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 101.32.194.212   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
+101.32.200.29    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 101.32.208.70    # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 101.32.208.152   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
 101.32.211.249   # HK  AS132203  Tencent Building, Kejizhongyi Avenue
@@ -318621,6 +318721,7 @@
 101.71.38.8      # CN  AS4837    CHINA UNICOM China169 Backbone
 101.71.38.11     # CN  AS4837    CHINA UNICOM China169 Backbone
 101.71.38.15     # CN  AS4837    CHINA UNICOM China169 Backbone
+101.71.38.18     # CN  AS4837    CHINA UNICOM China169 Backbone
 101.71.38.19     # CN  AS4837    CHINA UNICOM China169 Backbone
 101.71.38.20     # CN  AS4837    CHINA UNICOM China169 Backbone
 101.71.38.26     # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -321368,6 +321469,7 @@
 102.201.253.236  # MU  -         -
 102.201.253.238  # MU  -         -
 102.202.6.16     # MU  -         -
+102.202.6.18     # MU  -         -
 102.202.45.162   # MU  -         -
 102.202.74.104   # MU  -         -
 102.202.74.117   # MU  -         -
@@ -323104,6 +323206,7 @@
 102.220.209.227  # ZA  AS11845   Vox Telecom Ltd
 102.221.12.6     # ZA  AS328810  Techwood Trading (Pty) Ltd.
 102.221.12.22    # ZA  AS328810  Techwood Trading (Pty) Ltd.
+102.221.12.54    # ZA  AS328810  Techwood Trading (Pty) Ltd.
 102.221.13.2     # ZA  AS328810  Techwood Trading (Pty) Ltd.
 102.221.23.74    # TZ  AS15399   Wananchi Group (Kenya) Limited
 102.221.28.133   # GH  AS328797  Broadspectrum Limited
@@ -327675,6 +327778,7 @@
 103.82.24.124    # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
 103.82.24.197    # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
 103.82.25.77     # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
+103.82.25.98     # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
 103.82.25.248    # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
 103.82.26.72     # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
 103.82.26.182    # VN  AS135905  VIETNAM POSTS AND TELECOMMUNICATIONS GROUP
@@ -329330,6 +329434,7 @@
 103.111.88.22    # BD  AS23991   Ranks ITT Ltd.
 103.111.88.96    # BD  AS23991   Ranks ITT Ltd.
 103.111.94.78    # ID  AS136093  PT Mitra Lintas Multimedia
+103.111.96.170   # ID  AS136093  PT Mitra Lintas Multimedia
 103.111.98.163   # ID  AS136093  PT Mitra Lintas Multimedia
 103.111.109.194  # IN  AS137118  Sparklink.Net Pvt Ltd
 103.111.114.29   # IN  AS8849    Melbikomas UAB
@@ -338985,6 +339090,7 @@
 103.237.114.6    # MM  AS134840  Myanmar Country Co., Ltd.
 103.237.114.7    # MM  AS134840  Myanmar Country Co., Ltd.
 103.237.114.8    # MM  AS134840  Myanmar Country Co., Ltd.
+103.237.114.10   # MM  AS134840  Myanmar Country Co., Ltd.
 103.237.114.12   # MM  AS134840  Myanmar Country Co., Ltd.
 103.237.115.55   # MM  AS134840  Myanmar Country Co., Ltd.
 103.237.115.58   # MM  AS134840  Myanmar Country Co., Ltd.
@@ -341752,6 +341858,7 @@
 104.28.219.139   # NL  AS13335   Cloudflare, Inc.
 104.28.219.140   # NL  AS13335   Cloudflare, Inc.
 104.28.219.144   # NL  AS13335   Cloudflare, Inc.
+104.28.219.148   # NL  AS13335   Cloudflare, Inc.
 104.28.219.149   # MM  AS13335   Cloudflare, Inc.
 104.28.219.190   # US  AS13335   Cloudflare, Inc.
 104.28.219.191   # US  AS13335   Cloudflare, Inc.
@@ -342034,6 +342141,7 @@
 104.28.247.132   # ID  AS13335   Cloudflare, Inc.
 104.28.247.133   # ID  AS13335   Cloudflare, Inc.
 104.28.247.136   # US  AS13335   Cloudflare, Inc.
+104.28.247.137   # US  AS13335   Cloudflare, Inc.
 104.28.247.164   # US  AS13335   Cloudflare, Inc.
 104.28.247.178   # IN  AS13335   Cloudflare, Inc.
 104.28.247.179   # IN  AS13335   Cloudflare, Inc.
@@ -342049,6 +342157,7 @@
 104.28.249.140   # NL  AS13335   Cloudflare, Inc.
 104.28.249.187   # ID  AS13335   Cloudflare, Inc.
 104.28.249.188   # ID  AS13335   Cloudflare, Inc.
+104.28.249.207   # TR  AS13335   Cloudflare, Inc.
 104.28.249.212   # KR  AS13335   Cloudflare, Inc.
 104.28.249.213   # KR  AS13335   Cloudflare, Inc.
 104.28.249.214   # KR  AS13335   Cloudflare, Inc.
@@ -353047,6 +353156,7 @@
 106.75.144.239   # CN  AS58466   CHINANET Guangdong province network
 106.75.144.250   # CN  AS58466   CHINANET Guangdong province network
 106.75.145.17    # CN  AS58466   CHINANET Guangdong province network
+106.75.145.70    # CN  AS58466   CHINANET Guangdong province network
 106.75.145.110   # CN  AS58466   CHINANET Guangdong province network
 106.75.145.215   # CN  AS58466   CHINANET Guangdong province network
 106.75.146.57    # CN  AS58466   CHINANET Guangdong province network
@@ -354282,6 +354392,7 @@
 107.150.105.153  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 107.150.105.168  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 107.150.105.183  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
+107.150.105.196  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 107.150.105.214  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 107.150.105.224  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 107.150.105.241  # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
@@ -362355,6 +362466,7 @@
 110.251.32.52    # CN  AS4837    CHINA UNICOM China169 Backbone
 110.251.158.61   # CN  AS4837    CHINA UNICOM China169 Backbone
 110.252.41.81    # CN  AS4837    CHINA UNICOM China169 Backbone
+110.252.44.83    # CN  AS4837    CHINA UNICOM China169 Backbone
 110.252.95.8     # CN  AS4837    CHINA UNICOM China169 Backbone
 110.252.95.107   # CN  AS4837    CHINA UNICOM China169 Backbone
 110.252.175.104  # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -364374,6 +364486,7 @@
 111.173.158.108  # CN  AS4134    CHINANET-BACKBONE
 111.173.158.113  # CN  AS4134    CHINANET-BACKBONE
 111.173.158.114  # CN  AS4134    CHINANET-BACKBONE
+111.173.158.117  # CN  AS4134    CHINANET-BACKBONE
 111.173.158.125  # CN  AS4134    CHINANET-BACKBONE
 111.173.158.126  # CN  AS4134    CHINANET-BACKBONE
 111.173.158.151  # CN  AS4134    CHINANET-BACKBONE
@@ -371342,6 +371455,7 @@
 113.201.161.67   # CN  AS4837    CHINA UNICOM China169 Backbone
 113.201.167.45   # CN  AS4837    CHINA UNICOM China169 Backbone
 113.201.167.103  # CN  AS4837    CHINA UNICOM China169 Backbone
+113.201.167.117  # CN  AS4837    CHINA UNICOM China169 Backbone
 113.201.167.139  # CN  AS4837    CHINA UNICOM China169 Backbone
 113.201.174.30   # CN  AS4837    CHINA UNICOM China169 Backbone
 113.201.174.43   # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -375612,6 +375726,7 @@
 115.148.204.134  # CN  AS4134    CHINANET-BACKBONE
 115.148.206.45   # CN  AS4134    CHINANET-BACKBONE
 115.148.206.113  # CN  AS4134    CHINANET-BACKBONE
+115.148.213.241  # CN  AS4134    CHINANET-BACKBONE
 115.148.214.35   # CN  AS4134    CHINANET-BACKBONE
 115.148.236.196  # CN  AS4134    CHINANET-BACKBONE
 115.149.140.218  # CN  AS4134    CHINANET-BACKBONE
@@ -387474,6 +387589,7 @@
 118.99.80.231    # ID  AS17451   BIZNET NETWORKS
 118.99.84.43     # ID  AS17451   BIZNET NETWORKS
 118.99.87.104    # ID  AS17451   BIZNET NETWORKS
+118.99.88.20     # ID  AS17451   BIZNET NETWORKS
 118.99.93.38     # ID  AS17451   BIZNET NETWORKS
 118.99.93.118    # ID  AS17451   BIZNET NETWORKS
 118.99.98.32     # ID  AS17451   BIZNET NETWORKS
@@ -389176,6 +389292,7 @@
 118.248.199.161  # CN  AS4134    CHINANET-BACKBONE
 118.248.202.85   # CN  AS4134    CHINANET-BACKBONE
 118.248.202.127  # CN  AS4134    CHINANET-BACKBONE
+118.248.202.168  # CN  AS4134    CHINANET-BACKBONE
 118.248.202.189  # CN  AS4134    CHINANET-BACKBONE
 118.248.205.172  # CN  AS4134    CHINANET-BACKBONE
 118.248.205.210  # CN  AS4134    CHINANET-BACKBONE
@@ -390512,6 +390629,7 @@
 119.99.164.39    # CN  AS4134    CHINANET-BACKBONE
 119.99.164.40    # CN  AS4134    CHINANET-BACKBONE
 119.99.164.44    # CN  AS4134    CHINANET-BACKBONE
+119.99.164.67    # CN  AS4134    CHINANET-BACKBONE
 119.99.164.74    # CN  AS4134    CHINANET-BACKBONE
 119.99.164.88    # CN  AS4134    CHINANET-BACKBONE
 119.99.164.90    # CN  AS4134    CHINANET-BACKBONE
@@ -394336,6 +394454,7 @@
 120.230.181.198  # CN  AS9808    China Mobile Communications Group Co., Ltd.
 120.230.181.214  # CN  AS9808    China Mobile Communications Group Co., Ltd.
 120.230.181.229  # CN  AS9808    China Mobile Communications Group Co., Ltd.
+120.230.190.123  # CN  AS9808    China Mobile Communications Group Co., Ltd.
 120.230.191.2    # CN  AS9808    China Mobile Communications Group Co., Ltd.
 120.230.191.26   # CN  AS9808    China Mobile Communications Group Co., Ltd.
 120.230.191.56   # CN  AS9808    China Mobile Communications Group Co., Ltd.
@@ -398772,13 +398891,16 @@
 122.96.31.151    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.154    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.155    # CN  AS4837    CHINA UNICOM China169 Backbone
+122.96.31.159    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.160    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.161    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.167    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.168    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.173    # CN  AS4837    CHINA UNICOM China169 Backbone
+122.96.31.184    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.186    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.187    # CN  AS4837    CHINA UNICOM China169 Backbone
+122.96.31.190    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.192    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.201    # CN  AS4837    CHINA UNICOM China169 Backbone
 122.96.31.204    # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -402781,6 +402903,7 @@
 123.139.118.65   # CN  AS4837    CHINA UNICOM China169 Backbone
 123.139.118.73   # CN  AS4837    CHINA UNICOM China169 Backbone
 123.139.118.83   # CN  AS4837    CHINA UNICOM China169 Backbone
+123.139.118.91   # CN  AS4837    CHINA UNICOM China169 Backbone
 123.139.118.178  # CN  AS4837    CHINA UNICOM China169 Backbone
 123.139.118.212  # CN  AS4837    CHINA UNICOM China169 Backbone
 123.139.118.213  # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -408163,6 +408286,7 @@
 125.42.32.125    # CN  AS4837    CHINA UNICOM China169 Backbone
 125.42.32.186    # CN  AS4837    CHINA UNICOM China169 Backbone
 125.42.71.105    # CN  AS4837    CHINA UNICOM China169 Backbone
+125.42.71.195    # CN  AS4837    CHINA UNICOM China169 Backbone
 125.42.82.175    # CN  AS4837    CHINA UNICOM China169 Backbone
 125.42.84.38     # CN  AS4837    CHINA UNICOM China169 Backbone
 125.42.121.102   # CN  AS4837    CHINA UNICOM China169 Backbone
@@ -408899,6 +409023,7 @@
 125.124.22.150   # CN  AS58461   CT-HangZhou-IDC
 125.124.24.140   # CN  AS58461   CT-HangZhou-IDC
 125.124.27.181   # CN  AS58461   CT-HangZhou-IDC
+125.124.41.140   # CN  AS58461   CT-HangZhou-IDC
 125.124.41.249   # CN  AS58461   CT-HangZhou-IDC
 125.124.42.183   # CN  AS58461   CT-HangZhou-IDC
 125.124.63.31    # CN  AS58461   CT-HangZhou-IDC
@@ -409193,6 +409318,7 @@
 125.162.165.233  # ID  AS7713    PT Telekomunikasi Indonesia
 125.162.166.62   # ID  AS7713    PT Telekomunikasi Indonesia
 125.162.166.138  # ID  AS7713    PT Telekomunikasi Indonesia
+125.162.167.7    # ID  AS7713    PT Telekomunikasi Indonesia
 125.162.167.248  # ID  AS7713    PT Telekomunikasi Indonesia
 125.162.181.108  # ID  AS7713    PT Telekomunikasi Indonesia
 125.162.213.139  # ID  AS7713    PT Telekomunikasi Indonesia
@@ -438015,14 +438141,29 @@
 137.59.154.5     # BD  AS135071  VIDEO ELEPHANT
 137.59.154.67    # BD  AS135071  VIDEO ELEPHANT
 137.59.155.147   # BD  AS135071  VIDEO ELEPHANT
+137.59.218.12    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.18    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.27    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.32    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.48    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.64    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.76    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.80    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.84    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.85    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.87    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.92    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.124   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.134   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.137   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.141   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.142   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.144   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.176   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.182   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.191   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.195   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+137.59.218.235   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.239   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.218.242   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 137.59.225.74    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
@@ -438964,6 +439105,7 @@
 137.184.78.225   # US  AS14061   DigitalOcean, LLC
 137.184.79.7     # US  AS14061   DigitalOcean, LLC
 137.184.79.13    # US  AS14061   DigitalOcean, LLC
+137.184.79.19    # US  AS14061   DigitalOcean, LLC
 137.184.79.22    # US  AS14061   DigitalOcean, LLC
 137.184.79.24    # US  AS14061   DigitalOcean, LLC
 137.184.79.55    # US  AS14061   DigitalOcean, LLC
@@ -442910,13 +443052,17 @@
 138.117.14.17    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.19    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.20    # AR  AS265798  LEVEL SEVEN SRL
+138.117.14.22    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.23    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.25    # AR  AS265798  LEVEL SEVEN SRL
+138.117.14.26    # AR  AS265798  LEVEL SEVEN SRL
+138.117.14.27    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.28    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.29    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.30    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.31    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.48    # AR  AS265798  LEVEL SEVEN SRL
+138.117.14.52    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.54    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.61    # AR  AS265798  LEVEL SEVEN SRL
 138.117.14.70    # AR  AS265798  LEVEL SEVEN SRL
@@ -454275,6 +454421,7 @@
 141.126.9.18     # US  AS20115   Charter Communications LLC
 141.126.41.251   # US  AS20115   Charter Communications LLC
 141.126.58.147   # US  AS20115   Charter Communications LLC
+141.126.70.231   # US  AS20115   Charter Communications LLC
 141.126.95.64    # US  AS20115   Charter Communications LLC
 141.126.186.148  # US  AS20115   Charter Communications LLC
 141.133.174.22   # US  AS14512   Bentley University
@@ -464668,6 +464815,7 @@
 143.246.203.45   # US  -         -
 143.246.203.108  # US  -         -
 143.246.203.114  # US  -         -
+143.246.207.116  # US  -         -
 143.246.208.110  # US  -         -
 143.246.209.68   # US  -         -
 143.246.211.211  # US  -         -
@@ -475287,6 +475435,7 @@
 147.93.7.192     # US  AS40021   Contabo Inc.
 147.93.7.193     # US  AS40021   Contabo Inc.
 147.93.7.202     # US  AS40021   Contabo Inc.
+147.93.7.208     # US  AS40021   Contabo Inc.
 147.93.7.212     # US  AS40021   Contabo Inc.
 147.93.12.217    # BR  AS47583   Hostinger International Limited
 147.93.14.7      # BR  AS47583   Hostinger International Limited
@@ -478677,6 +478826,7 @@
 148.246.51.101   # MX  AS28530   Mexico Red de Telecomunicaciones, S. de R.L. de C.V.
 148.246.51.113   # MX  AS28530   Mexico Red de Telecomunicaciones, S. de R.L. de C.V.
 148.246.51.174   # MX  AS28530   Mexico Red de Telecomunicaciones, S. de R.L. de C.V.
+148.246.51.190   # MX  AS28530   Mexico Red de Telecomunicaciones, S. de R.L. de C.V.
 148.246.51.198   # MX  AS28530   Mexico Red de Telecomunicaciones, S. de R.L. de C.V.
 148.251.19.42    # DE  AS24940   Hetzner Online GmbH
 148.251.20.169   # DE  AS24940   Hetzner Online GmbH
@@ -488925,6 +489075,7 @@
 152.200.183.148  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
 152.200.183.155  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
 152.200.183.180  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
+152.200.191.245  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
 152.200.195.243  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
 152.200.195.247  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
 152.200.195.254  # CO  AS3816    COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
@@ -490339,6 +490490,7 @@
 153.117.33.11    # US  -         -
 153.117.33.12    # US  -         -
 153.117.33.18    # US  -         -
+153.117.33.19    # US  -         -
 153.117.33.24    # US  -         -
 153.117.33.26    # US  -         -
 153.117.33.31    # US  -         -
@@ -490421,6 +490573,7 @@
 153.117.33.228   # US  -         -
 153.117.33.231   # US  -         -
 153.117.33.234   # US  -         -
+153.117.33.235   # US  -         -
 153.117.33.241   # US  -         -
 153.117.33.242   # US  -         -
 153.117.33.245   # US  -         -
@@ -493204,6 +493357,7 @@
 154.83.197.241   # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 154.83.197.249   # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 154.83.197.251   # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
+154.83.199.168   # US  AS135377  UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
 154.83.211.23    # US  AS54801   Zillion Network Inc.
 154.83.211.58    # US  AS54801   Zillion Network Inc.
 154.83.211.194   # US  AS54801   Zillion Network Inc.
@@ -494480,6 +494634,7 @@
 154.241.6.0      # DZ  AS36947   Telecom Algeria
 154.241.6.13     # DZ  AS36947   Telecom Algeria
 154.241.6.25     # DZ  AS36947   Telecom Algeria
+154.241.6.33     # DZ  AS36947   Telecom Algeria
 154.241.6.63     # DZ  AS36947   Telecom Algeria
 154.241.7.8      # DZ  AS36947   Telecom Algeria
 154.241.7.114    # DZ  AS36947   Telecom Algeria
@@ -497048,6 +497203,7 @@
 157.18.138.115   # CN  AS17816   China Unicom IP network China169 Guangdong province
 157.18.141.18    # CN  AS17816   China Unicom IP network China169 Guangdong province
 157.18.147.19    # CN  AS17816   China Unicom IP network China169 Guangdong province
+157.18.147.195   # CN  AS17816   China Unicom IP network China169 Guangdong province
 157.18.148.14    # CN  AS17816   China Unicom IP network China169 Guangdong province
 157.18.152.114   # CN  AS17816   China Unicom IP network China169 Guangdong province
 157.18.156.158   # CN  AS17816   China Unicom IP network China169 Guangdong province
@@ -513508,6 +513664,7 @@
 159.223.79.19    # SG  AS14061   DigitalOcean, LLC
 159.223.79.25    # SG  AS14061   DigitalOcean, LLC
 159.223.79.26    # SG  AS14061   DigitalOcean, LLC
+159.223.79.42    # SG  AS14061   DigitalOcean, LLC
 159.223.79.46    # SG  AS14061   DigitalOcean, LLC
 159.223.79.76    # SG  AS14061   DigitalOcean, LLC
 159.223.79.88    # SG  AS14061   DigitalOcean, LLC
@@ -518266,6 +518423,8 @@
 160.250.240.23   # BD  AS142615  SARKER COMMUNICATION
 160.250.240.41   # BD  AS142615  SARKER COMMUNICATION
 160.250.240.48   # BD  AS142615  SARKER COMMUNICATION
+160.250.240.148  # BD  AS142615  SARKER COMMUNICATION
+160.250.240.149  # BD  AS142615  SARKER COMMUNICATION
 160.250.240.152  # BD  AS142615  SARKER COMMUNICATION
 160.250.240.153  # BD  AS142615  SARKER COMMUNICATION
 160.250.240.156  # BD  AS142615  SARKER COMMUNICATION
@@ -539341,6 +539500,7 @@
 165.227.88.230   # US  AS14061   DigitalOcean, LLC
 165.227.88.240   # US  AS14061   DigitalOcean, LLC
 165.227.89.3     # US  AS14061   DigitalOcean, LLC
+165.227.89.34    # US  AS14061   DigitalOcean, LLC
 165.227.89.106   # US  AS14061   DigitalOcean, LLC
 165.227.89.116   # US  AS14061   DigitalOcean, LLC
 165.227.89.117   # US  AS14061   DigitalOcean, LLC
@@ -557799,6 +557959,7 @@
 168.0.252.131    # BR  -         -
 168.0.254.182    # BR  -         -
 168.0.254.239    # BR  -         -
+168.0.255.0      # BR  -         -
 168.0.255.1      # BR  -         -
 168.0.255.44     # BR  -         -
 168.5.43.11      # US  AS8       Rice University
@@ -559790,6 +559951,7 @@
 168.144.111.140  # US  -         -
 168.144.111.156  # US  -         -
 168.144.111.176  # US  -         -
+168.144.111.181  # US  -         -
 168.144.111.235  # US  -         -
 168.144.112.147  # US  -         -
 168.144.112.158  # US  -         -
@@ -568385,8 +568547,11 @@
 170.150.157.17   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.18   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.20   # CL  AS27901   Pacifico Cable SPA.
+170.150.157.21   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.22   # CL  AS27901   Pacifico Cable SPA.
+170.150.157.23   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.24   # CL  AS27901   Pacifico Cable SPA.
+170.150.157.26   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.30   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.31   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.38   # CL  AS27901   Pacifico Cable SPA.
@@ -568394,6 +568559,7 @@
 170.150.157.46   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.48   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.54   # CL  AS27901   Pacifico Cable SPA.
+170.150.157.55   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.68   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.72   # CL  AS27901   Pacifico Cable SPA.
 170.150.157.100  # CL  AS27901   Pacifico Cable SPA.
@@ -570077,6 +570243,7 @@
 171.83.81.122    # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
 171.83.81.123    # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
 171.83.85.0      # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
+171.83.89.15     # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
 171.83.89.57     # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
 171.83.89.176    # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
 171.83.97.136    # CN  AS137266  CHINATELECOM Hubei province Wuhan 5G network
@@ -588847,12 +589014,45 @@
 175.107.215.133  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.215.211  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.5    # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.18   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.33   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.41   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.49   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.53   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.56   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.62   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.64   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.75   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.76   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.91   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.96   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.102  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.113  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.129  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.130  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.131  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.138  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.139  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.146  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.148  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.152  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.153  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.159  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.162  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.216.163  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.167  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.194  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.197  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.200  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.201  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.206  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.208  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.213  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.242  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.244  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.245  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.251  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
+175.107.216.253  # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.217.14   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.217.30   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
 175.107.217.82   # PK  AS9541    Cyber Internet Services (Pvt) Ltd.
@@ -590658,6 +590858,7 @@
 176.36.146.80    # UA  AS39608   Lanet Network Ltd
 176.36.148.174   # UA  AS39608   Lanet Network Ltd
 176.36.161.9     # UA  AS39608   Lanet Network Ltd
+176.36.161.187   # UA  AS39608   Lanet Network Ltd
 176.36.163.43    # UA  AS39608   Lanet Network Ltd
 176.36.173.122   # UA  AS39608   Lanet Network Ltd
 176.36.174.177   # UA  AS39608   Lanet Network Ltd
@@ -592690,6 +592891,7 @@
 176.111.176.246  # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
 176.111.177.43   # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
 176.111.177.88   # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
+176.111.178.46   # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
 176.111.179.73   # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
 176.111.179.216  # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
 176.111.179.249  # UA  AS25229   Limited Liability Company "KYIVSKI TELEKOMUNIKATSIYNI MEREZHI"
@@ -594233,6 +594435,7 @@
 176.228.169.171  # IL  AS12400   Partner Communications Ltd.
 176.228.171.244  # IL  AS12400   Partner Communications Ltd.
 176.228.248.145  # IL  AS12400   Partner Communications Ltd.
+176.228.253.85   # IL  AS12400   Partner Communications Ltd.
 176.229.8.78     # IL  AS12400   Partner Communications Ltd.
 176.229.48.142   # IL  AS12400   Partner Communications Ltd.
 176.229.72.117   # IL  AS12400   Partner Communications Ltd.
@@ -597019,6 +597222,7 @@
 177.170.231.86   # BR  AS26599   TELEFÔNICA BRASIL S.A
 177.170.231.167  # BR  AS26599   TELEFÔNICA BRASIL S.A
 177.171.26.40    # BR  AS26599   TELEFÔNICA BRASIL S.A
+177.171.46.196   # BR  AS26599   TELEFÔNICA BRASIL S.A
 177.171.74.78    # BR  AS26599   TELEFÔNICA BRASIL S.A
 177.171.74.87    # BR  AS26599   TELEFÔNICA BRASIL S.A
 177.171.96.52    # BR  AS26599   TELEFÔNICA BRASIL S.A
@@ -597659,6 +597863,7 @@
 177.247.6.53     # MX  AS262916  Mega Cable, S.A. de C.V.
 177.249.60.72    # MX  AS16960   Television Internacional, S.A. de C.V.
 177.249.60.139   # MX  AS16960   Television Internacional, S.A. de C.V.
+177.249.60.169   # MX  AS16960   Television Internacional, S.A. de C.V.
 177.249.60.217   # MX  AS16960   Television Internacional, S.A. de C.V.
 177.249.161.198  # MX  AS16960   Television Internacional, S.A. de C.V.
 177.249.168.63   # MX  AS270161  Television Internacional, S.A. de C.V.
@@ -613231,6 +613436,7 @@
 180.243.13.149   # ID  AS7713    PT Telekomunikasi Indonesia
 180.243.14.206   # ID  AS7713    PT Telekomunikasi Indonesia
 180.243.33.215   # ID  AS7713    PT Telekomunikasi Indonesia
+180.243.38.191   # ID  AS7713    PT Telekomunikasi Indonesia
 180.243.58.94    # ID  AS7713    PT Telekomunikasi Indonesia
 180.243.59.57    # ID  AS7713    PT Telekomunikasi Indonesia
 180.243.59.142   # ID  AS7713    PT Telekomunikasi Indonesia
@@ -613630,6 +613836,7 @@
 181.1.215.88     # AR  AS7303    Telecom Argentina S.A.
 181.1.238.71     # AR  AS7303    Telecom Argentina S.A.
 181.2.0.94       # AR  AS7303    Telecom Argentina S.A.
+181.2.0.220      # AR  AS7303    Telecom Argentina S.A.
 181.2.17.89      # AR  AS7303    Telecom Argentina S.A.
 181.2.36.133     # AR  AS7303    Telecom Argentina S.A.
 181.2.37.49      # AR  AS7303    Telecom Argentina S.A.
@@ -613838,6 +614045,7 @@
 181.23.46.13     # AR  AS22927   Telefonica de Argentina
 181.23.46.193    # AR  AS22927   Telefonica de Argentina
 181.23.46.218    # AR  AS22927   Telefonica de Argentina
+181.23.46.238    # AR  AS22927   Telefonica de Argentina
 181.23.47.17     # AR  AS22927   Telefonica de Argentina
 181.23.47.35     # AR  AS22927   Telefonica de Argentina
 181.23.47.221    # AR  AS22927   Telefonica de Argentina
@@ -617512,6 +617720,7 @@
 181.119.84.170   # CO  AS52468   UFINET PANAMA S.A.
 181.119.84.182   # CO  AS52468   UFINET PANAMA S.A.
 181.119.85.181   # CO  AS52468   UFINET PANAMA S.A.
+181.119.89.162   # CL  AS52468   UFINET PANAMA S.A.
 181.119.89.164   # CL  AS52468   UFINET PANAMA S.A.
 181.119.90.178   # CL  AS52468   UFINET PANAMA S.A.
 181.119.90.180   # CL  AS52468   UFINET PANAMA S.A.
@@ -626099,6 +626308,7 @@
 183.222.14.237   # CN  AS9808    China Mobile Communications Group Co., Ltd.
 183.222.14.242   # CN  AS9808    China Mobile Communications Group Co., Ltd.
 183.222.41.67    # CN  AS9808    China Mobile Communications Group Co., Ltd.
+183.222.62.64    # CN  AS9808    China Mobile Communications Group Co., Ltd.
 183.222.174.168  # CN  AS9808    China Mobile Communications Group Co., Ltd.
 183.222.230.16   # CN  AS9808    China Mobile Communications Group Co., Ltd.
 183.222.230.77   # CN  AS9808    China Mobile Communications Group Co., Ltd.
@@ -628622,6 +628832,7 @@
 185.42.24.228    # RU  AS59504   LLC Vpsville
 185.42.40.133    # RU  AS59815   Kompeatelecom Ltd.
 185.43.7.18      # RU  AS29182   JSC IOT
+185.43.7.237     # RU  AS29182   JSC IOT
 185.43.10.11     # RU  AS48573   PHAETON PLUS d.o.o
 185.43.10.131    # RU  AS48573   PHAETON PLUS d.o.o
 185.43.16.107    # IT  AS42764   Arpitel s.r.l.
@@ -630352,6 +630563,7 @@
 185.98.5.226     # KZ  AS207333  Hoster.KZ - Astana
 185.98.7.237     # KZ  AS207333  Hoster.KZ - Astana
 185.98.60.248    # TR  AS29262   Ideal Hosting Teknoloji A.S.
+185.98.78.165    # KZ  AS39824   JSC Alma Telecommunications
 185.98.97.34     # DK  AS3342    Cibicom A/S
 185.98.128.239   # FR  AS210403  Groupe LWS SARL
 185.98.136.204   # FR  AS210403  Groupe LWS SARL
@@ -640815,6 +641027,7 @@
 186.22.245.106   # AR  AS27747   Telecentro S.A.
 186.22.245.107   # AR  AS27747   Telecentro S.A.
 186.22.245.108   # AR  AS27747   Telecentro S.A.
+186.22.245.127   # AR  AS27747   Telecentro S.A.
 186.22.245.136   # AR  AS27747   Telecentro S.A.
 186.22.245.137   # AR  AS27747   Telecentro S.A.
 186.22.245.138   # AR  AS27747   Telecentro S.A.
@@ -647200,6 +647413,7 @@
 188.66.127.172   # GB  AS31655   Gamma Telecom Holdings Ltd
 188.66.219.195   # OM  AS50010   Omani Qatari Telecommunication Company SAOC
 188.66.230.82    # OM  AS50010   Omani Qatari Telecommunication Company SAOC
+188.66.233.88    # OM  AS50010   Omani Qatari Telecommunication Company SAOC
 188.66.237.74    # OM  AS50010   Omani Qatari Telecommunication Company SAOC
 188.66.244.53    # OM  AS50010   Omani Qatari Telecommunication Company SAOC
 188.66.254.205   # OM  AS50010   Omani Qatari Telecommunication Company SAOC
@@ -663982,6 +664196,7 @@
 190.109.228.190  # BO  AS52495   Cotel Ltda.
 190.109.228.191  # BO  AS52495   Cotel Ltda.
 190.109.228.214  # BO  AS52495   Cotel Ltda.
+190.109.228.244  # BO  AS52495   Cotel Ltda.
 190.109.234.2    # BO  AS52495   Cotel Ltda.
 190.109.234.16   # BO  AS52495   Cotel Ltda.
 190.110.36.120   # DO  AS271968  CENTRIC MOBILITY (CEMO), S.R.L
@@ -669287,6 +669502,7 @@
 192.141.149.188  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
 192.141.149.213  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
 192.141.149.239  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
+192.141.149.240  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
 192.141.149.244  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
 192.141.149.248  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
 192.141.149.252  # AR  AS265786  MUNICIPALIDAD DE MALAGUEÑO
@@ -680119,6 +680335,7 @@
 194.127.165.67   # GB  AS47553   Misaka Network, Inc.
 194.127.165.68   # GB  AS47553   Misaka Network, Inc.
 194.127.165.69   # GB  AS47553   Misaka Network, Inc.
+194.127.166.201  # GB  AS47553   Misaka Network, Inc.
 194.127.178.97   # NL  AS62240   Clouvider
 194.127.178.185  # NL  AS62240   Clouvider
 194.127.179.180  # NL  AS62240   Clouvider
@@ -686175,6 +686392,7 @@
 196.21.92.1      # ZA  AS2018    TENET (The UNINET Project)
 196.22.48.114    # MZ  AS36865   Teledata Mozambique
 196.25.89.150    # ZA  AS5713    Telkom SA Ltd.
+196.25.90.94     # ZA  AS5713    Telkom SA Ltd.
 196.25.94.222    # ZA  AS5713    Telkom SA Ltd.
 196.25.113.218   # ZA  AS5713    Telkom SA Ltd.
 196.25.113.220   # ZA  AS5713    Telkom SA Ltd.
@@ -686360,6 +686578,7 @@
 196.75.36.143    # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
 196.75.41.161    # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
 196.75.61.137    # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
+196.75.65.116    # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
 196.75.66.181    # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
 196.75.71.72     # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
 196.75.73.68     # MA  AS36903   Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
@@ -688972,6 +689191,7 @@
 197.248.163.247  # KE  AS37061   Safaricom Limited
 197.248.169.61   # KE  AS37061   Safaricom Limited
 197.248.174.205  # KE  AS37061   Safaricom Limited
+197.248.178.226  # KE  AS37061   Safaricom Limited
 197.248.179.127  # KE  AS37061   Safaricom Limited
 197.248.190.89   # KE  AS37061   Safaricom Limited
 197.248.194.231  # KE  AS37061   Safaricom Limited
@@ -695739,6 +695959,7 @@
 200.225.116.251  # AR  AS270054  GLOBALRADIO S.A.
 200.225.118.171  # AR  AS270054  GLOBALRADIO S.A.
 200.225.118.188  # AR  AS270054  GLOBALRADIO S.A.
+200.225.118.195  # AR  AS270054  GLOBALRADIO S.A.
 200.225.118.197  # AR  AS270054  GLOBALRADIO S.A.
 200.225.118.198  # AR  AS270054  GLOBALRADIO S.A.
 200.225.118.199  # AR  AS270054  GLOBALRADIO S.A.
@@ -696880,6 +697101,7 @@
 201.124.154.37   # MX  AS8151    UNINET
 201.124.155.217  # MX  AS8151    UNINET
 201.124.158.217  # MX  AS8151    UNINET
+201.124.159.16   # MX  AS8151    UNINET
 201.124.164.94   # MX  AS8151    UNINET
 201.124.164.247  # MX  AS8151    UNINET
 201.124.168.139  # MX  AS8151    UNINET
@@ -721838,6 +722060,7 @@
 209.99.187.100   # US  -         -
 209.99.187.118   # US  -         -
 209.99.187.122   # US  -         -
+209.99.187.142   # US  -         -
 209.99.187.148   # US  -         -
 209.99.187.155   # US  -         -
 209.99.187.157   # US  -         -
@@ -724555,6 +724778,7 @@
 211.243.199.135  # KR  AS9318    SK Broadband Co Ltd
 211.245.36.18    # KR  AS9318    SK Broadband Co Ltd
 211.245.36.214   # KR  AS9318    SK Broadband Co Ltd
+211.245.36.240   # KR  AS9318    SK Broadband Co Ltd
 211.245.63.77    # KR  AS9318    SK Broadband Co Ltd
 211.245.203.177  # KR  AS9318    SK Broadband Co Ltd
 211.246.160.21   # KR  AS9694    Seokyung Cable Television Co.. Ltd.
@@ -726301,6 +726525,7 @@
 212.79.122.54    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
 212.79.122.58    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
 212.79.122.65    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
+212.79.122.66    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
 212.79.122.68    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
 212.79.122.71    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
 212.79.122.74    # UA  AS202538  Private Enterprise TRK "ATV-PLUS"
@@ -748544,6 +748769,7 @@
 223.151.251.95   # CN  AS4134    CHINANET-BACKBONE
 223.151.251.216  # CN  AS4134    CHINANET-BACKBONE
 223.151.252.207  # CN  AS4134    CHINANET-BACKBONE
+223.151.253.83   # CN  AS4134    CHINANET-BACKBONE
 223.151.253.173  # CN  AS4134    CHINANET-BACKBONE
 223.151.254.60   # CN  AS4134    CHINANET-BACKBONE
 223.151.255.65   # CN  AS4134    CHINANET-BACKBONE
