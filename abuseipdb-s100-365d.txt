@@ -1,10 +1,10 @@
 #
 # Aggregated Blocklist for AbuseIPDB: A list of the most reported IP addresses.
 #
-# Last updated:           2026-11-23 21:06:07 UTC
+# Last updated:           2026-11-23 22:07:54 UTC
 # Confidence level:       ~100%
 # Filename:               abuseipdb-s100-365d.ipv4
-# Number of ips:          760315
+# Number of ips:          760326
 #
 # Source:                 https://github.com/borestad/blocklist-abuseipdb
 # Stats:                  https://github.com/borestad/blocklist-abuseipdb/tree/main/stats
@@ -14496,6 +14496,7 @@
 5.231.108.163    # DE  AS213250  Dominic Scholz trading as ITP-Solutions GmbH & Co. KG
 5.231.108.212    # DE  AS213250  Dominic Scholz trading as ITP-Solutions GmbH & Co. KG
 5.231.116.2      # DE  AS58087   Florian Kolb
+5.231.117.58     # DE  AS12586   GHOSTnet GmbH
 5.231.117.209    # DE  AS12586   GHOSTnet GmbH
 5.231.118.32     # DE  AS12586   GHOSTnet GmbH
 5.231.118.67     # DE  AS12586   GHOSTnet GmbH
@@ -181164,6 +181165,7 @@
 45.141.233.26    # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.27    # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.28    # PL  AS201814  MEVSPACE sp. z o.o.
+45.141.233.29    # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.31    # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.32    # PL  AS201814  MEVSPACE sp. z o.o.
 45.141.233.33    # PL  AS201814  MEVSPACE sp. z o.o.
@@ -264641,6 +264643,7 @@
 77.90.61.81      # DE  AS215365  Tom Gewiese
 77.90.61.143     # DE  AS215365  Tom Gewiese
 77.90.61.200     # DE  AS215365  Tom Gewiese
+77.90.61.206     # DE  AS215365  Tom Gewiese
 77.90.61.210     # DE  AS215365  Tom Gewiese
 77.90.61.214     # DE  AS215365  Tom Gewiese
 77.90.61.217     # DE  AS215365  Tom Gewiese
@@ -265979,6 +265982,7 @@
 77.239.124.184   # NL  AS205089  Alfahost LLC
 77.239.124.185   # NL  AS205089  Alfahost LLC
 77.239.124.187   # NL  AS205089  Alfahost LLC
+77.239.124.188   # NL  AS205089  Alfahost LLC
 77.239.124.190   # NL  AS205089  Alfahost LLC
 77.239.124.200   # NL  AS205089  Alfahost LLC
 77.239.124.201   # NL  AS205089  Alfahost LLC
@@ -313338,6 +313342,7 @@
 94.249.187.133   # US  AS12586   GHOSTnet GmbH
 94.249.187.144   # US  AS12586   GHOSTnet GmbH
 94.249.187.147   # US  AS12586   GHOSTnet GmbH
+94.249.187.163   # US  AS12586   GHOSTnet GmbH
 94.249.187.193   # US  AS12586   GHOSTnet GmbH
 94.249.188.39    # DE  AS12586   GHOSTnet GmbH
 94.249.188.47    # DE  AS12586   GHOSTnet GmbH
@@ -352810,6 +352815,7 @@
 104.245.245.71   # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.110  # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.112  # PL  AS201814  MEVSPACE sp. z o.o.
+104.245.245.113  # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.124  # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.153  # PL  AS201814  MEVSPACE sp. z o.o.
 104.245.245.154  # PL  AS201814  MEVSPACE sp. z o.o.
@@ -365283,6 +365289,7 @@
 109.205.208.238  # AZ  AS15723   "AZERONLINE LTD" JOINT ENTERPRISE
 109.205.211.4    # PL  AS201814  MEVSPACE sp. z o.o.
 109.205.211.6    # PL  AS201814  MEVSPACE sp. z o.o.
+109.205.211.7    # PL  AS201814  MEVSPACE sp. z o.o.
 109.205.211.9    # PL  AS201814  MEVSPACE sp. z o.o.
 109.205.211.10   # PL  AS201814  MEVSPACE sp. z o.o.
 109.205.211.11   # PL  AS201814  MEVSPACE sp. z o.o.
@@ -485981,6 +485988,7 @@
 149.50.127.119   # PL  AS201814  MEVSPACE sp. z o.o.
 149.50.127.135   # PL  AS201814  MEVSPACE sp. z o.o.
 149.50.127.157   # PL  AS201814  MEVSPACE sp. z o.o.
+149.50.127.162   # PL  AS201814  MEVSPACE sp. z o.o.
 149.50.127.176   # PL  AS201814  MEVSPACE sp. z o.o.
 149.50.127.182   # PL  AS201814  MEVSPACE sp. z o.o.
 149.50.127.187   # PL  AS201814  MEVSPACE sp. z o.o.
@@ -702683,8 +702691,10 @@
 199.103.61.107   # CA  AS36218   WHG Hosting Services Ltd
 199.103.61.230   # CA  AS36218   WHG Hosting Services Ltd
 199.103.63.50    # CA  AS36218   WHG Hosting Services Ltd
+199.104.61.17    # US  -         -
 199.104.61.100   # US  -         -
 199.104.61.145   # US  -         -
+199.104.61.146   # US  -         -
 199.104.63.9     # US  -         -
 199.104.63.33    # US  -         -
 199.104.63.59    # US  -         -
@@ -735654,6 +735664,7 @@
 212.23.216.117   # IR  AS43754   Asiatech Data Transmission company
 212.23.217.3     # IQ  AS210509  Optimum Line for Internet Services Ltd.
 212.23.222.6     # PL  AS201814  MEVSPACE sp. z o.o.
+212.23.222.10    # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.12    # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.22    # PL  AS201814  MEVSPACE sp. z o.o.
 212.23.222.24    # PL  AS201814  MEVSPACE sp. z o.o.
